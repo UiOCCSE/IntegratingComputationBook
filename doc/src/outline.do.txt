@@ -1,0 +1,14 @@
+TITLE: Integrating Computation in Undergraduate Physics Courses (An Outline)
+AUTHOR: Marcos D. Caballero at Department of Physics and Astronomy, Michigan State University & Department of Physics and Center for Computing in Science Education, University of Oslo
+AUTHOR: Morten Hjorth-Jensen at Department of Physics and Astronomy, Michigan State University & Department of Physics and Center for Computing in Science Education, University of Oslo
+DATE: today
+
+======= Purpose =======
+
+Using this book, we aim to provide a practical guide for those looking to integrate computation into their undergraduate physics courses. The book will attempt to achieve several goals:
+
+o Provide motivation and rationale for why such computational integration is necessary, and as such, offer arguments in favor of computational integration that others may use for their own discussions.
+o Offer a suite of computational learning goals at a variety of scales and for a variety of topics in order to present the variety of ways and different levels of the depth to which students may work with computational ideas.
+o Provide example activities in which students are engaged with such learning goals to varying degrees in order to demonstrate the wide variety of ways in which computation can be used in classrooms.
+o Through these examples, discuss a variety of implementation models in order to inform readers of the needs, benefits, and challenges of each.
+o Discuss more broadly the issues of computational integration including available resources and on-going research efforts.
