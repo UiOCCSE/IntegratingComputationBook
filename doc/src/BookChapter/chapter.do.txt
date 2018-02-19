@@ -1,16 +1,56 @@
 TITLE: Integrating a computational perspective in physics courses
-AUTHOR: Daniel Marcos Caballero at  Department of Physics and Astronomy, Michigan State University, East Lansing, Michigan, USA & Department of Physics and Center for Computing in Science Education, University of Oslo, Oslo, Norway 
-AUTHOR: Morten Hjorth-Jensen at  Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan, USA & Department of Physics and Center for Computing in Science Education, University of Oslo, Oslo, Norway 
+AUTHOR: Daniel Marcos Caballero at  Department of Physics and Astronomy, Michigan State University, East Lansing, 48824 Michigan, USA & Department of Physics and Center for Computing in Science Education, University of Oslo, N-0316 Oslo, Norway 
+AUTHOR: Morten Hjorth-Jensen at  Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, 48824 Michigan, USA & Department of Physics and Center for Computing in Science Education, University of Oslo, N-0316 Oslo, Norway 
 DATE: today
 
 
 
 ===== Introduction =====
 
-Computing competence represents a central element
-in scientific problem solving, from basic education and research to
-essentially almost all advanced problems in modern
-societies.
+Many important recent advances in our understanding of the physical
+world have been driven by large-scale computational modeling and data
+analysis, for example, the 2012 discovery of the Higgs boson, the 2013
+Nobel Prize in chemistry for computational modeling of molecules, and
+the 2016 discovery of gravitational Waves.  Given the ubiquitous use
+in science and its critical importance to the future of science and
+engineering, scientific computing plays a central role in scientific
+investigations and is central to innovation in most domains of our
+lives. It underpins the majority of today's technological, economic
+and societal feats and we have entered an era in which huge amounts of
+data offer enormous opportunities. "By 2020, it is also expected that one out of every two
+jobs in the STEM (Science, Technology, Engineering and Mathematics) fields will be in
+computing":"http://pathways.acm.org/executive-summary.html"
+(Association for Computing Machinery, 2013).
+
+These developments, needs and future challenges, as well as the
+developments which are now taking place within quantum computing,
+quantum information theory and data driven discoveries (data analysis and
+machine learning) will play an essential role in shaping future
+technological developments. Most of these developments require true
+cross-disciplinary approaches and bridge a vast range of
+temporal and spatial scales and include a wide variety of physical
+processes. To develop computational tools for such complex
+systems that give physically meaningful insights requires a deep
+understanding of approximation theory, high performance computing, and
+domain specific knowledge of the area one is modeling.
+
+Computing competence represents thus a central element in scientific
+problem solving, from basic education and research to essentially
+almost all advanced problems in modern societies. And these competences are not limited to STEM fields only. The statistical 
+analysis of big data sets and how to use machine leraning algorithm, belong nowadays to the set of tools needed by almost all disciplines, spanning from the Social Sciences, Law, Education the tradtional STEM fields and Life Science.
+Unfortunately, many
+of our students at both the undergraduate and the graduate level are
+unprepared to use computational modeling, data science, and high
+performance computing, skills that are much valued by a broad range of
+employers.  Furthermore, although many universities do offer
+compulsory programming courses in scientific computing, and physics
+departments offer one or several elective courses in computational physics, there is not a uniform and coherent approach to what we mean
+by computing competences and computational thinking. This has in turn consequences for a systematic introduction and realization of 
+computing skills and competences and pertaining learning outcomes. 
+
+The aim of this contribution is thus to present examples based on our experiences 
+
+
 
 Computing competence _enlarges the body of tools available to students_ and
 scientists beyond classical tools and _allows for a more generic
@@ -767,4 +807,5 @@ Aim: Develop intuition about the scientific method
 
 
 
-    
+
+
