@@ -98,7 +98,7 @@
 
 
 
-\title{Integrating a Computational Perspective in physics Courses}
+\title{Integrating a Computational Perspective in Physics Courses}
 \author{Daniel Marcos Caballero and Morten Hjorth-Jensen}
 \institute{Daniel Marcos Caballero \at Department of physics and Astronomy, Michigan State University, East Lansing, 48824 Michigan, USA and
 Department of physics and Center for computing in Science Education, University of Oslo, N-0316 Oslo, Norway, \email{caballero@pa.msu.edu} \and
@@ -123,11 +123,11 @@ lives. It underpins the majority of today's technological, economic
 and societal feats and we have entered an era in which huge amounts of
 data offer enormous opportunities. \href{{http://pathways.acm.org/executive-summary.html}}{By 2020, it is also expected that one out of every two
 jobs in the STEM (Science, Technology, Engineering and mathematics) fields will be in
-computing }
+computing}
 (Association for Computing Machinery, 2013, \cite{ACM2013}).
 
 These developments, needs and future challenges, as well as the
-developments which are now taking place within quantum computing ,
+developments which are now taking place within quantum computing,
 quantum information theory and data driven discoveries (data analysis and
 machine learning) will play an essential role in shaping future
 technological developments. Most of these developments require true
@@ -161,7 +161,7 @@ The aim of this contribution is thus to present examples on how to
 introduce a computational perspective in basic undergraduate physics
 courses, basing ourselves on experiences made at the University of
 Oslo in Norway and now also at Michigan State University in the
-USA. In particular, we will present the \textbf{computing in Science
+USA. In particular, we will present the \textbf{Computing in Science
 Education} project from the University of Oslo \cite{CSEUiO}, a project which has
 evolved into a center of Excellence in education, the \href{{http://www.mn.uio.no/ccse/english/}}{Center for
 computing in Science
@@ -333,7 +333,7 @@ undergraduate physics courses
 
 
 
-\subsection{General Learning Outcomes for computing Competence.}
+\subsection{General Learning Outcomes for Computing Competence.}
 
 Here we present some high-level learning outcomes that we expect
 students to develop through comprehensive and coordinated instruction
@@ -451,7 +451,7 @@ Verifying a model and the resulting outcomes it produces are essential elements 
 \end{itemize}
 
 
-\subsection{Learning outcomes for presentation of results}
+\subsection{Learning outcomes for Presentation of Results}
 The results of a computation need to be communicated in some format (i.e., through figures, posters, talks, and other forms of written and oral communication). Computation affords the experience of presenting original results quite readily. Through their engagement with presentations of their findings, we aim for students to develop:
 
 \begin{itemize}
@@ -780,7 +780,7 @@ Furthemore, such a course should offer more advanced projects which train the st
 
 \subsection{Physics Education Research and Computing in Science Education}
 The introduction of computational elements in the various courses should be, if possible,  strongly integrated with ongoing research on physics education.
-The physics and Astronomy department at MSU is in a unique position due to its strong research group in physics education, the \href{{http://www.pa.msu.edu/research/physics-education-lab}}{PERL group} \cite{PERLMSU}. Together with the Center for computing in Science Education at the University of Oslo \cite{CCSEUiO}, we are now in the process
+The Physics and Astronomy department at MSU is in a unique position due to its strong research group in physics education, the \href{{http://www.pa.msu.edu/research/physics-education-lab}}{PERL group} \cite{PERLMSU}. Together with the Center for computing in Science Education at the University of Oslo \cite{CCSEUiO}, we are now in the process
 of establishing new assessments
 and assessment methods that address several issues associated with
 integrating computing into science courses. The issues include but
@@ -822,12 +822,12 @@ studies and to establish best practices in this emerging field.  Some
 assessments will be developed for specific courses, but we will aim
 for broad applicability across institutions.
 
-\section{Examples on how to Include computing in physics Undergraduate Programs}\label{sec:examples}
+\section{Examples on how to Include computing in Physics Undergraduate Programs}\label{sec:examples}
 
 Having defined possible learning outcomes, we would like now to
 present some examples which reflect the discussions above. These
-examples are taken from various courses at the University of
-Oslo. Since 2003, first via the
+examples are mainly taken from various courses at the University of
+Oslo, although some of them have been used at Michigan State University. Since 2003, first via the
 \href{{http://www.mn.uio.no/ccse/english/people/index.html}}{Computing 
   in Science Education project} \cite{CSEUiO} and now through the recently
 established center of excellence in education
@@ -838,7 +838,7 @@ disciplines in a synchronized way.
 Central elements here are a compulsory programming course with a
 strong mathematical flavour. This course gives a solid foundation in
 programming as a problem solving technique in mathematics. The line of
-thought when solving mathematical problems numerically enhances
+thought is that when solving mathematical problems numerically, this should enhance
 algorithmic thinking, and thereby the students' understanding of the
 scientific process.  Secondly, mathematics is at least as important as
 before, but should be supplemented with development, analysis,
@@ -852,7 +852,7 @@ Crucial ingredients for the success of the computing in Science
 Education project has been the support from governing bodies as well
 as extensive cooperations across departmental boundaries. And finally, 
 the willingness of several university teachers and researchers to give
-priority to teaching reform.
+priority to teaching reforms.
 
 In addition to the above, over the years we have coordinated the use
 of computational exercises and numerical tools in most undergraduate
@@ -863,11 +863,11 @@ and give support (scientific, pedagogical and financial) to those who
 wish to revise their courses in a computational direction. This may
 include the organization of courses for university teachers. Summer
 students aid in developing and introducing computational exercises and
-several new textbooks have been developed, from the basic Mechanics
-course to a course in Statistical physics.
+several new textbooks have been developed, from the basic mechanics
+course to a course in statistical physics \cite{AMS2015, AIV2018,AMSDS2019}.
 
 
-\subsection{The physics Undergraduate Program at the University of Oslo.}
+\subsection{The Physics Undergraduate Program at the University of Oslo.}
 The layout of the physics bachelor's degree program at the University of Oslo is shown in table \ref{tab:FAUiO}.
 \begin{table}
 \caption{The bachelor's degree program in physics at the University of Oslo, Norway}\label{tab:FAUiO}
@@ -932,7 +932,15 @@ Python offers an  extremely versatile programming  environment, allowing for
 the inclusion of analytical studies in a numerical program. Here we show an
 example code with the \textbf{trapezoidal rule} using Python's symbolic package \textbf{SymPy} \cite{SymPy} to evaluate an integral and compute the absolute error
 with respect to the numerically evaluated one of the integral
-$\int_0^1 dx x^2 = 1/3$:
+$\int_0^1 dx x^2 = 1/3$. This is in shown in the following code part
+\begin{lstlisting}
+# define x as a symbol to be used by sympy
+x = Symbol('x')
+exact = integrate(function(x), (x, 0.0, 1.0))
+print("Sympy integration=", exact)
+\end{lstlisting}
+where we have defined the function to integrate in 
+the complete Python program that follows here.
 \begin{lstlisting}
 from math import *
 from sympy import *
@@ -1039,7 +1047,7 @@ modifications only.
 
 
 
-\subsection{From mathematics to physics}
+\subsection{From Mathematics to Physics}
 
 We assume that our students know how to solve and study systems of
 ordinary differential with initial conditions only. Later in this
@@ -1152,7 +1160,7 @@ value problem
 R \frac{d^2 u(x)}{dx^2} = -F u(x),
 \]
 where $u(x)$ is the vertical displacement, $R$ is a material specific
-constant, $F$ is applied force and $x \in [0,L]$ with $u(0)=u(L)=0$.
+constant, $F$ is the applied force and $x \in [0,L]$ with $u(0)=u(L)=0$.
 We scale the equation with $x = \rho L$ and $\rho \in [0,1]$ and get
 (note that we change from $u(x)$ to $v(\rho)$)
 \[
@@ -1410,7 +1418,7 @@ of different potentials.  The possibility to visualize the results immediately, 
 This example contains also many of the
 computing learning outcomes we discussed above, in addition to those
 related to the physics of a particular system. We see that, by proper
-scaling, the students can make abstraction and explore other
+scaling, the students can make further abstractions and explore other
 physics cases easily where no analytical solutions are known. With
 unit testing and analytical results they can validate and verify their
 algorithms.
@@ -1425,7 +1433,7 @@ The above example allows the student to test the mathematical error of
 the algorithm for the eigenvalue solver by simply changing the number
 of integration points. The students get trained from day one to think
 error analysis.  The algorithm can be tailored to any kind of
-one-particle problem used in quantum mechanics or eigenvalue problems
+one-particle problem used in quantum mechanics.
 
 A simple rewrite allows for the reuse in linear algebra problems for
 solution of say Poisson's equation in electromagnetism, or the
