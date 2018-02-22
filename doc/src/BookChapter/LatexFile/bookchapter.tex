@@ -8,7 +8,7 @@
 \usepackage{algpseudocode} % together for code
 \usepackage{amsfonts}
 
-\usepackage{type1cm}         
+\usepackage{type1cm}
 \usepackage{exercise}
 \usepackage{makeidx}         % allows index generation
 \usepackage{graphicx}        % standard LaTeX graphics tool
@@ -41,7 +41,7 @@
  \lstset{showstringspaces=false}
  \lstset{showtabs=false}
  \lstset{breaklines}
- 
+
 
 % Default settings for code listings
 % \lstnewenvironment{Python}[1]{
@@ -57,9 +57,9 @@
   numberstyle=\tiny\color{black},
   commentstyle=\color{black},
   stringstyle=\color{black},
- frame=single,  
+ frame=single,
   breaklines=true,
-  %%%% FOR PYTHON 
+  %%%% FOR PYTHON
   otherkeywords={\ , \}, \{},
   keywordstyle=\color{black},
   emph={void, ||, &&, break, class,continue, delete, else,
@@ -72,7 +72,7 @@
   emphstyle=[3]\color{black},
   upquote=true,
   morecomment=[s]{"""}{"""},
-  commentstyle=\color{black}\slshape, 
+  commentstyle=\color{black}\slshape,
   emph={[4]1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
   emphstyle=[4]\color{black},
   breakatwhitespace=true,
@@ -99,15 +99,15 @@
 
 
 \title{Integrating a Computational Perspective in Physics Courses}
-\author{Daniel Marcos Caballero and Morten Hjorth-Jensen}
-\institute{Daniel Marcos Caballero \at Department of physics and Astronomy, Michigan State University, East Lansing, 48824 Michigan, USA and
-Department of physics and Center for computing in Science Education, University of Oslo, N-0316 Oslo, Norway, \email{caballero@pa.msu.edu} \and
-Morten Hjorth-Jensen \at Department of physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, 48824 Michigan, USA and Department of physics and Center for computing in Science Education, University of Oslo, N-0316 Oslo, Norway, \email{hjensen@frib.msu.edu}}
+\author{Marcos Daniel Caballero and Morten Hjorth-Jensen}
+\institute{Marcos Daniel Caballero \at Department of Physics and Astronomy, Michigan State University, East Lansing, 48824 Michigan, USA and
+Department of Physics and Center for Computing in Science Education, University of Oslo, N-0316 Oslo, Norway, \email{caballero@pa.msu.edu} \and
+Morten Hjorth-Jensen \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, 48824 Michigan, USA and Department of Physics and Center for Computing in Science Education, University of Oslo, N-0316 Oslo, Norway, \email{hjensen@frib.msu.edu}}
 
 
 \maketitle
 
-\abstract{In this contribution we discuss how to develop a physics curriculum for undergraduate students that includes computing as a central element. Our contribution starts with a definition of computing and pertinent learning outcomes and assessment studies and programs. We end with a discusssion on how to implement computing in various physics courses by presenting our experiences from Michigan State University in the USA and the University of Oslo in Norway.}
+\abstract{In this contribution we discuss how to develop a physics curriculum for undergraduate students that includes computing as a central element. Our contribution starts with a definition of computing and pertinent learning outcomes and assessment studies and programs. We end with a discussion on how to implement computing in various physics courses by presenting our experiences from Michigan State University in the USA and the University of Oslo in Norway.}
 
 \section{Introduction}
 
@@ -115,19 +115,19 @@ Many important recent advances in our understanding of the physical
 world have been driven by large-scale computational modeling and data
 analysis, for example, the 2012 discovery of the Higgs boson, the 2013
 Nobel Prize in chemistry for computational modeling of molecules, and
-the 2016 discovery of gravitational Waves.  Given the ubiquitous use
+the 2016 discovery of gravitational waves.  Given the ubiquitous use
 in science and its critical importance to the future of science and
 engineering, scientific computing  plays a central role in scientific
-investigations and is central to innovation in most domains of our
+investigations and is critical to innovation in most domains of our
 lives. It underpins the majority of today's technological, economic
-and societal feats and we have entered an era in which huge amounts of
+and societal feats. We have entered an era in which huge amounts of
 data offer enormous opportunities. \href{{http://pathways.acm.org/executive-summary.html}}{By 2020, it is also expected that one out of every two
-jobs in the STEM (Science, Technology, Engineering and mathematics) fields will be in
+jobs in the STEM (Science, Technology, Engineering and Mathematics) fields will be in
 computing}
 (Association for Computing Machinery, 2013, \cite{ACM2013}).
 
 These developments, needs and future challenges, as well as the
-developments which are now taking place within quantum computing,
+developments that are now taking place within quantum computing,
 quantum information theory and data driven discoveries (data analysis and
 machine learning) will play an essential role in shaping future
 technological developments. Most of these developments require true
@@ -135,61 +135,60 @@ cross-disciplinary approaches and bridge a vast range of
 temporal and spatial scales and include a wide variety of physical
 processes. To develop computational tools for such complex
 systems that give physically meaningful insights requires a deep
-understanding of approximation theory, high performance computing , and
+understanding of approximation theory, high performance computing, and
 domain specific knowledge of the area one is modeling.
 
-Computing competence represents thus a central element in scientific
+Computing competence represents a central element in scientific
 problem solving, from basic education and research to essentially
-almost all advanced problems in modern societies. And these
-competences are not limited to STEM fields only. The statistical
+almost all advanced problems in modern societies. These
+competencies are not limited to STEM fields only. The statistical
 analysis of big data sets and how to use machine learning algorithms
-belong nowadays to the set of tools needed by almost all disciplines,
+belong to the set of tools needed by almost all disciplines,
 spanning from the Social Sciences, Law, Education to the traditional
 STEM fields and Life Science.  Unfortunately, many of our students at
 both the undergraduate and the graduate levels are unprepared to use
-computational modeling, data science, and high performance computing ,
-skills that are much valued by a broad range of employers.
+computational modeling, data science, and high performance computing,
+skills that are much valued by a broad range of employers. This lack of preparation is most certainly no fault of our students, but rather a broader issue associated with how departments, colleges, and universities are keeping up with the demands of these high-tech employers. It is through this integrated computational perspective that we aim to address this.
 Furthermore, although many universities do offer compulsory
-programming courses in scientific computing , and physics departments
+programming courses in scientific computing, and physics departments
 offer one or more elective courses in computational physics, there is
 often not a uniform and coherent approach to the development of
-computing  competences and computational thinking. This has in turn
+computing  competencies and computational thinking. This has
 consequences for a systematic introduction and realization of
-computing  skills and competences and pertaining learning outcomes.
+computing  skills and competencies and pertaining learning outcomes.
 
-The aim of this contribution is thus to present examples on how to
+The aim of this contribution is to present examples on how to
 introduce a computational perspective in basic undergraduate physics
 courses, basing ourselves on experiences made at the University of
 Oslo in Norway and now also at Michigan State University in the
 USA. In particular, we will present the \textbf{Computing in Science
 Education} project from the University of Oslo \cite{CSEUiO}, a project which has
-evolved into a center of Excellence in education, the \href{{http://www.mn.uio.no/ccse/english/}}{Center for
-computing in Science
+evolved into a Center of Excellence in Education, the \href{{http://www.mn.uio.no/ccse/english/}}{Center for
+Computing in Science
 Education} \cite{CCSEUiO}. Similar initiatives
 and ideas are also being pursued at Michigan State University.  The
-overarching aim is to strengthen the computing  competences of
-students, with keywords such as the establishment of learning
+overarching aim is to strengthen the computing  competencies of
+students, with key activities such as the establishment of learning
 outcomes, how to develop assessment programs and course
 transformations by including computational projects and exercises in a
 coherent way. The hope is that these initiatives can also lead to a
 better understanding of the scientific method and scientific reasoning
-as well as providing new and deeper insights about the physics of a
-system.
+as well as providing new and deeper insights about the underlying physics that governs a system.
 
 This contribution is organized as follows. After these introductory
-remarks, we present briefly in the next section what we mean by computing  and present
-possible learning outcomes which could be applied to a bachelor's degree
-program in physics.  Thereafter we discuss possible paths on how to include and implement 
+remarks, we present briefly in the next section what we mean by computing and present
+possible learning outcomes that could be applied to a bachelor's degree
+program in physics (Sec. \ref{sec:competencies}), which are distinguished as more general competencies and course-specific ones.  In Sec. \ref{sec:learingoutcomes}, we discuss possible paths on how to include and implement
 computational elements in central undergraduate physics courses. We discuss briefly
-how to assess various learning outcomes and how to develop a research program around this. 
-Several examples that illustrate the links between the learning outcomes and specific mathematics and physics courses 
-are thence discussed in section \ref{sec:examples}.
+how to assess various learning outcomes and how to develop a research program around this.
+Several examples that illustrate the links between the learning outcomes and specific mathematics and physics courses
+are discussed in Sec. \ref{sec:examples}.
 Finally, in the last section we present our conclusions and perspectives.
 
 
-\section{Computing competences} \label{sec:competences}
+\section{Computing competencies} \label{sec:competencies}
 
-The focus of this article is on computing competences and how
+The focus of this article is on computing competencies and how
 these help in enlarging the body of tools available to students and
 scientists alike, going well beyond classical tools taught in standard
 undergraduate courses in physics and mathematics. We will claim through various
@@ -198,7 +197,7 @@ problems, where focusing on algorithmic aspects results in deeper
 insights about scientific problems.
 
 With \textbf{Computing } we will mean solving scientific problems using all
-possible tools, including symbolic computing , computers and numerical
+possible tools, including symbolic computing, computers and numerical
 algorithms, experiments and analytical paper and pencil solutions. We
 will thus, deliberately, avoid a discussion of computing  and
 computational physics in particular as something separate from
@@ -208,7 +207,7 @@ physics now represents the third leg of research alongside analytical
 theory and experiments}. In selected contexts where say
 high-performance topics or specific computational methodologies play a
 central role, it may be meaningful to separate analytical work from
-computational studies. We will however argue strongly, in particular within an educational context,  
+computational studies. We will however argue strongly, in particular within an educational context,
 for a view where
 computing  means solving scientific problems with all possible
 tools. Through various examples in this article we will show that a
@@ -221,8 +220,8 @@ The power of the scientific method lies in identifying a given problem
 as a special case of an abstract class of problems, identifying
 general solution methods for this class of problems, and applying a
 general method to the specific problem (applying means, in the case of
-computing , calculations by pen and paper, symbolic computing , or
-numerical computing  by ready-made and/or self-written software). 
+computing, calculations by pen and paper, symbolic computing, or
+numerical computing  by ready-made and/or self-written software).
 
 This generic view on problems and methods is particularly important for
 understanding how to apply available generic software to solve a
@@ -266,9 +265,9 @@ algebra, and shifts the focus to problem definition, visualization,
 and "what if" discussions. Finally, if the setup of undergraduate
 courses is properly designed, with a synchronization with mathematics
 and computational science courses, computing can trigger further
-insights in mathematics and other disciplines. 
+insights in mathematics and other disciplines.
 
-On the part of students, an increase in computing competences involves being able to
+On the part of students, an increase in computing competencies involves being able to
 \begin{itemize}
 \item understand how algorithms are used to solve mathematical problems,
 
@@ -282,19 +281,19 @@ On the part of students, an increase in computing competences involves being abl
 \end{itemize}
 
 
-\section{Learning Outcomes and Assessment Programs}
+\section{Learning Outcomes and Assessment Programs}\label{sec:learingoutcomes}
 
 An essential element in designing a synchronization of computing in
 various physics (and other disciplines as well) courses is a proper
 definition of learning outcomes, as well as the development of
-assessment programs and possibly a pertinent research program on physics education. 
+assessment programs and possibly a pertinent research program on physics education.
 Having a strong physics Education
 group which can define a proper research program is an essential part
 of such an endeavor. Michigan State University has a strong physics
 Education group involved in such research programs. Similarly, the
 University of Oslo, with its recently established center of excellence
 in education \cite{CCSEUiO}, has started to define  a research program  which aims at assessing
-the relevance and importance of 
+the relevance and importance of
 computing in science education.
 
 Physics, together with basic mathematics and computational science
@@ -346,7 +345,7 @@ how we expect them to participate in that work.
 
 Numerical algorithms form the basis for solving science and
 engineering problems with computers. An understanding of algorithms
-does not itself serve as an understanding of computing , but it is a
+does not itself serve as an understanding of computing, but it is a
 necessary step along the path. Through comprehensive and coordinated
 instruction, we aim for students to have developed:
 
@@ -359,7 +358,7 @@ instruction, we aim for students to have developed:
 
 \item Root finding and interpolation methods
 
-\item machine Learning algorithms 
+\item machine Learning algorithms
 
 \item statistical Data Analysis and handling of data sets
 
@@ -384,7 +383,7 @@ in other courses.
 \subsection{Learning Outcomes for Symbolic Computing}
 Symbolic computing  is a helpful tool for addressing certain classes of
 problems where a functional representation of the solution (or part of
-the solution) is needed. Through engaging with symbolic computing 
+the solution) is needed. Through engaging with symbolic computing
 platforms, we aim for students to have developed:
 
 \begin{itemize}
@@ -464,7 +463,7 @@ The results of a computation need to be communicated in some format (i.e., throu
 
 
 The above learning goals and outcomes are of a more generic character. What follows here are specific
-algorithms that occur frequently in scientific problems. The implementation of these algorithms in various physics courses, together with problem and project solving, is a way to implement large fractions of the above learning goals. 
+algorithms that occur frequently in scientific problems. The implementation of these algorithms in various physics courses, together with problem and project solving, is a way to implement large fractions of the above learning goals.
 
 \subsection{Central Algorithms}
 The following mathematical formulations of problems from the physical sciences play a prominent role and should be reflected in how we teach physics:
@@ -557,11 +556,11 @@ We will strongly recommend that Python is used as the high-level
  means that students can apply their knowledge from the basic programming course offered by most universities.
 Many university courses in programming  make nowadays use of Python, and extend their computational knowledge in
  various physics classes. We recommend  that the following
- tools are used 
+ tools are used
 \begin{enumerate}
-\item \href{{http://jupyter.org/}}{jupyter and ipython notebook}.  
+\item \href{{http://jupyter.org/}}{jupyter and ipython notebook}.
 
-\item version control software like \href{{https://git-scm.com/}}{git} and repositories like \href{{https://github.com/}}{GitHub} and \href{{https://gitlab.com/}}{GitLab} 
+\item version control software like \href{{https://git-scm.com/}}{git} and repositories like \href{{https://github.com/}}{GitHub} and \href{{https://gitlab.com/}}{GitLab}
 
 \item other typsetting tools like {\LaTeX}.
 
@@ -785,18 +784,18 @@ of establishing new assessments
 and assessment methods that address several issues associated with
 integrating computing into science courses. The issues include but
 are not limited to how well students learn computing, what new
-insights students gain about the specific science through computing ,
+insights students gain about the specific science through computing,
 and how students' affective states (e.g., motivation to learn,
 computational self-efficacy) are affected by computing . Broadly
 speaking, these assessments should provide deeper insights into the
 integration of computing  in science education in general as well as
 provide a structured framework for assessment of our efforts and a
-basis for systematic studies of student learning.  
+basis for systematic studies of student learning.
 
-The central questions that our research must address are 
+The central questions that our research must address are
 \begin{enumerate}
-\item how can we assess the effect of integrating computing  into science curricula on a variety of learned-centered constructs including computational thinking, motivation, self-efficacy and science identity formation, 
-\item how should we structure assessments to ensure valid, reliable and impactful assessment, which provides useful information to our program and central partners, and finally 
+\item how can we assess the effect of integrating computing  into science curricula on a variety of learned-centered constructs including computational thinking, motivation, self-efficacy and science identity formation,
+\item how should we structure assessments to ensure valid, reliable and impactful assessment, which provides useful information to our program and central partners, and finally
 \item how can the use of these structured assessments improve student outcomes in teacher-, peer-, and self-assessment.
 \end{enumerate}
 
@@ -812,7 +811,7 @@ The learning objectives and learning outcomes for computational
 methods developed as part of the first objective form parts of the
 basis for the assessment program, and we will also investigate the
 assessment of non-content learning goals such as self-efficacy and
-identity formation. 
+identity formation.
 
 The effect of integration of computational methods into basic science
 courses have been sparsely studied, primarily because the practice is
@@ -828,7 +827,7 @@ Having defined possible learning outcomes, we would like now to
 present some examples which reflect the discussions above. These
 examples are mainly taken from various courses at the University of
 Oslo, although some of them have been used at Michigan State University. Since 2003, first via the
-\href{{http://www.mn.uio.no/ccse/english/people/index.html}}{Computing 
+\href{{http://www.mn.uio.no/ccse/english/people/index.html}}{Computing
   in Science Education project} \cite{CSEUiO} and now through the recently
 established center of excellence in education
 \href{{http://www.mn.uio.no/ccse/english/}}{Center for computing in
@@ -850,7 +849,7 @@ sciences to life science.
 
 Crucial ingredients for the success of the computing in Science
 Education project has been the support from governing bodies as well
-as extensive cooperations across departmental boundaries. And finally, 
+as extensive cooperations across departmental boundaries. And finally,
 the willingness of several university teachers and researchers to give
 priority to teaching reforms.
 
@@ -893,11 +892,11 @@ Credits      & 10 ECTS                     & 10 ECTS                            
 \end{table}
 
 
-In the first semester the students encounter the first level of syncronization between computing courses  and mathematics courses. 
+In the first semester the students encounter the first level of syncronization between computing courses  and mathematics courses.
 As an example, consider the numerical evaluation of an integral by  the trapezoidal rule. Integral calculus is typically discussed first in the calculus course MAT1100.
 Thereafter, the algorithm for computing  the  integral using the trapezoidal rule for an interval $x \in [a,b]$
 \[
-  \int_a^b(f(x) dx \approx \frac{1}{2}\left [f(a)+2f(a+h)+\dots+2f(b-h)+f(b)\right], 
+  \int_a^b(f(x) dx \approx \frac{1}{2}\left [f(a)+2f(a+h)+\dots+2f(b-h)+f(b)\right],
 \]
 is discussed and developed in MAT-INF1100, the modeling and
 computations course that serves as an intermediate step between the
@@ -927,7 +926,7 @@ print(result)
 \end{lstlisting}
 Here we have defined an integral given by $I=\int_1^3 dx \exp{(-x^2)}*\log{(1+x\sin{(x)})}$.
 
-Coming back to the above learning outcomes, we would like to emphasize that 
+Coming back to the above learning outcomes, we would like to emphasize that
 Python offers an  extremely versatile programming  environment, allowing for
 the inclusion of analytical studies in a numerical program. Here we show an
 example code with the \textbf{trapezoidal rule} using Python's symbolic package \textbf{SymPy} \cite{SymPy} to evaluate an integral and compute the absolute error
@@ -939,7 +938,7 @@ x = Symbol('x')
 exact = integrate(function(x), (x, 0.0, 1.0))
 print("Sympy integration=", exact)
 \end{lstlisting}
-where we have defined the function to integrate in 
+where we have defined the function to integrate in
 the complete Python program that follows here.
 \begin{lstlisting}
 from math import *
@@ -1027,12 +1026,12 @@ of integration points. The students get trained from day one to think
 error analysis. Figure \ref{fig:error}  shows clearly the region where the
 relative error starts increasing.  The mathematical error which
 follows the trapezoidal rule goes as $O(h^2)$ where $h$ is the chosen
-numerical step size. It is proportional to the inverse of the number of integration points. 
+numerical step size. It is proportional to the inverse of the number of integration points.
 
 Before numerical round-off errors and loss of
 numerical precision kick in (near $h\sim 10^{-6}$) we see that the
 relative error in the log-log plot has a slope which follows the
-mathematical error.  
+mathematical error.
 
 There are several additional benefits here. In
 this process we can easily bake in how to structure a code in terms of
@@ -1067,7 +1066,7 @@ algorithms or perhaps the so-called Verlet class of algorithms. The
 idea is that algorithms students develop and use in one course can be
 reused in other courses.  This allows  students to make the
 relevant abstractions discussed above, opening up for a much wider
-range of applicabilities. 
+range of applicabilities.
 
 Here we look at two familiar cases from
 mechanics and electromagnetism, the equations for the classical
@@ -1088,7 +1087,7 @@ where $m$ is its mass, $l$ the length, $\nu$ a damping factor and $A$
 the amplitude of an applied external source with frequency
 $\omega$. The solution of this equation is something the students
 encounter the first semester in the courses IN1900 and
-MAT-INF1100. With this background, students are familiar with the numerical solution and visualization of such equations. 
+MAT-INF1100. With this background, students are familiar with the numerical solution and visualization of such equations.
 If we now move to a course on
 electromagnetism, we encounter almost the same equation for an RLC
 circuit, namely
@@ -1099,7 +1098,7 @@ where $L$ is the inductance, $R$ the applied resistance, $Q$ the
 time-dependent charge and $C$ the capacitance.
 
 We consider first the
-classical pendulum equations with damping and an external force and  define the velocity $v$ as 
+classical pendulum equations with damping and an external force and  define the velocity $v$ as
 \[
    \frac{d\theta}{d\hat{t}} =\hat{v},
 \]
@@ -1152,7 +1151,7 @@ quantum-mechanical one-body or selected two-body problems.  With
 slight modifications to the matrix that results from the
 discretization of a second derivative, we can study Poisson's equation
 in one dimension, a problem of relevance in
-electromagnetism. 
+electromagnetism.
 
 Let us start with the buckling beam. This is a two-point boundary
 value problem
@@ -1202,7 +1201,7 @@ standard eigenvalue problem
 \]
 The tridiagonal Toeplitz matrix has analytical eigenpairs,
 providing us thereby with an invaluable check on the equations to be
-solved.  
+solved.
 
 If we stay with quantum mechanical one-body problems (or
 special interacting two-body problems) adding a potential along the
@@ -1400,7 +1399,7 @@ plt.show()
 \end{lstlisting}
 
 
-The last example shows the potential of combining numerical algorithms with analytical results (or eventually symbolic calculations), allowing thereby students to test both their physics understanding. One can easily switch to other potentials by simply redefining the potential function. For example, a finite box potential can easily be defined as  
+The last example shows the potential of combining numerical algorithms with analytical results (or eventually symbolic calculations), allowing thereby students to test both their physics understanding. One can easily switch to other potentials by simply redefining the potential function. For example, a finite box potential can easily be defined as
 \begin{lstlisting}
 # Finite depth and range box potential, with strength V and range a
 def potential(r):
@@ -1413,7 +1412,7 @@ def potential(r):
 Thereafter, the students can explore the role of the potential depth
 and the range of the potential. Analyzing the eigenvectors gives
 additional information about the spatial degrees of freedom in terms
-of different potentials.  The possibility to visualize the results immediately, as shown in figure \ref{fig:eigenvector}, aids in providing students with a deeper understanding of the relevant physics. 
+of different potentials.  The possibility to visualize the results immediately, as shown in figure \ref{fig:eigenvector}, aids in providing students with a deeper understanding of the relevant physics.
 
 This example contains also many of the
 computing learning outcomes we discussed above, in addition to those
@@ -1438,16 +1437,16 @@ one-particle problem used in quantum mechanics.
 A simple rewrite allows for the reuse in linear algebra problems for
 solution of say Poisson's equation in electromagnetism, or the
 diffusion equation in one dimension. To see this and how the same matrix can be used in a course in electromagnetism, let us consider
-Poisson's equation. 
-We assume that 
+Poisson's equation.
+We assume that
 the electrostatic potential $\Phi$ is generated by a localized charge
-distribution $\rho (\mathbf{r})$.   In three dimensions 
+distribution $\rho (\mathbf{r})$.   In three dimensions
 the pertinent equation reads
 \[
 \nabla^2 \Phi = -4\pi \rho (\mathbf{r}).
 \]
-With a spherically symmetric potential $\Phi$ and charge distribution $\rho (\mathbf{r})$ and using spherical coordinates,  the relevant 
-equation to solve 
+With a spherically symmetric potential $\Phi$ and charge distribution $\rho (\mathbf{r})$ and using spherical coordinates,  the relevant
+equation to solve
 simplifies to a one-dimensional equation in $r$, namely
 \[
 \frac{1}{r^2}\frac{d}{dr}\left(r^2\frac{d\Phi}{dr}\right) = -4\pi \rho(r),
@@ -1459,15 +1458,15 @@ which can be rewritten via a substitution $\Phi(r)= \phi(r)/r$ as
 The inhomogeneous term $f$ or source term is given by the charge distribution
 $\rho$  multiplied by $r$ and the constant $-4\pi$.
 
-We can  rewrite this equation by letting $\phi\rightarrow u$ and 
+We can  rewrite this equation by letting $\phi\rightarrow u$ and
 $r\rightarrow x$.  Scaling again the equations and replacing the right hand side with a function $f(x)$, we can rewrite the
 equation as
 \[
 -u''(x) = f(x).
 \]
-Our scaling gives us again $x\in [0,1]$ and the two-point boundary value problem 
-with $u(0)=u(1)=0$. With $n+1$ integration points and 
-the step length defined as $h=1/(n)$ and replacing the continuous function $u$ with its discretized version $v$, we get 
+Our scaling gives us again $x\in [0,1]$ and the two-point boundary value problem
+with $u(0)=u(1)=0$. With $n+1$ integration points and
+the step length defined as $h=1/(n)$ and replacing the continuous function $u$ with its discretized version $v$, we get
 the following equation
 \begin{equation*}
    -\frac{v_{i+1}+v_{i-1}-2v_i}{h^2} = f_i  \hspace{0.5cm} \mathrm{for} \hspace{0.1cm} i=1,\dots, n,
@@ -1527,14 +1526,14 @@ discretization. With basic knowledge on how to solve linear algebra
 problems, eigenvalue porblems and differential equations, topics
 normally taught in mathematics and computational science courses, we
 can offer our students a much more challenging and interesting
-education. Furthermore, we give our students the competences which are
+education. Furthermore, we give our students the competencies which are
 required by future employers, either in the private or the public
 sector.
 
 
 \section{Conclusions and Perspectives}
 
-Will be finalized later. 
+Will be finalized later.
 
 
 \begin{itemize}
@@ -1585,7 +1584,3 @@ M.~H.~J. acknowledges U.S. National Science Foundation  Grant No. PHY-1404159.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
-
-
-
-
