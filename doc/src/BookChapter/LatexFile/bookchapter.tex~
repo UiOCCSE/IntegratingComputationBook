@@ -196,25 +196,27 @@ examples that computing  allows for a more generic handling of
 problems, where focusing on algorithmic aspects results in deeper
 insights about scientific problems.
 
-With \textbf{Computing } we will mean solving scientific problems using all
-possible tools, including symbolic computing, computers and numerical
-algorithms, experiments and analytical paper and pencil solutions. We
-will thus, deliberately, avoid a discussion of computing  and
-computational physics in particular as something separate from
-theoretical physics and experimental physics.  It is common in the
-scientific literature to encounter statements like \emph{Computational
-physics now represents the third leg of research alongside analytical
-theory and experiments}. In selected contexts where say
-high-performance topics or specific computational methodologies play a
-central role, it may be meaningful to separate analytical work from
-computational studies. We will however argue strongly, in particular within an educational context,
-for a view where
-computing  means solving scientific problems with all possible
-tools. Through various examples in this article we will show that a
-tight connection between standard analytical work, combined with
-various algorithms and a computational approach, can help in enhancing the
-students' understanding of the scientific method, hopefully providing
-deeper insights about the physics (or other disciplines). Whether and how we achieve these outcomes is the purpose of research in computational physics education.
+With \textbf{Computing } we will mean solving scientific problems
+using all possible tools, including symbolic computing, computers and
+numerical algorithms, experiments (often of a numerical character) and
+analytical paper and pencil solutions. We will thus, deliberately,
+avoid a discussion of computing and computational physics in
+particular as something separate from theoretical physics and
+experimental physics.  It is common in the scientific literature to
+encounter statements like \emph{Computational physics now represents
+  the third leg of research alongside analytical theory and
+  experiments}. In selected contexts where say high-performance topics
+or specific computational methodologies play a central role, it may be
+meaningful to separate analytical work from computational studies. We
+will however argue strongly, in particular within an educational
+context, for a view where computing means solving scientific problems
+with all possible tools. Through various examples in this article we
+will show that a tight connection between standard analytical work,
+combined with various algorithms and a computational approach, can
+help in enhancing the students' understanding of the scientific
+method, hopefully providing deeper insights about the physics (or
+other disciplines). Whether and how we achieve these outcomes is the
+purpose of research in computational physics education.
 
 The power of the scientific method lies in identifying a given problem
 as a special case of an abstract class of problems, identifying
@@ -266,20 +268,6 @@ and "what if" discussions. Finally, if the setup of undergraduate
 courses is properly designed, with a synchronization with mathematics
 and computational science courses, computing can trigger further
 insights in mathematics and other disciplines.
-
-On the part of students, an increase in computing competencies involves being able to:
-\begin{itemize}
-\item understand how algorithms are used to solve mathematical problems,
-
-\item derive, verify, and implement algorithms,
-
-\item understand what can go wrong with algorithms,
-
-\item use these algorithms to construct reproducible scientific outcomes and to engage in science in ethical ways, and
-
-\item think algorithmically for the purposes of gaining deeper insights about scientific problems.
-\end{itemize}
-
 
 \section{Learning Outcomes and Assessment Programs}\label{sec:learingoutcomes}
 
@@ -421,7 +409,7 @@ to have developed (these are possible examples):
 
 
 \subsubsection{Learning Outcomes for Mathematical Modeling}
-Preparing a problem to be solved numerically is a critical step in making progress towards an eventual solution. By providing opportunities for students engage in modeling, we aim for them to develop the ability to solve real problems from applied sciences by:
+Preparing a problem to be solved numerically is a critical step in making progress towards an eventual solution. By providing opportunities for students to engage in modeling, we aim for them to develop the ability to solve real problems from applied sciences by:
 
 \begin{itemize}
 \item deriving computational models from basic principles in physics and articulating the underlying assumptions in those models;
@@ -469,9 +457,54 @@ The results of a computation need to be communicated in some format (i.e., throu
 The above learning goals and outcomes are of a more generic character. What follows here are specific
 algorithms that occur frequently in scientific problems. The implementation of these algorithms in various physics courses, together with problem and project solving, is a way to implement large fractions of the above learning goals.
 
+
+\subsection{Central Tools and Programming Languages}
+We will strongly recommend that Python is used as the high-level
+ programming language. Other high-level environments like Mathematica
+ and Matlab can also be presented and offered as special courses. This
+ means that students can apply their knowledge from the basic programming course offered by most universities.
+Many university courses in programming  make use of Python, and extend their computational knowledge in
+ various physics classes. We recommend  that the following
+ tools are used:
+\begin{enumerate}
+\item \href{{http://jupyter.org/}}{jupyter and ipython notebooks};
+
+\item version control software like \href{{https://git-scm.com/}}{git} and repositories like \href{{https://github.com/}}{GitHub} and \href{{https://gitlab.com/}}{GitLab};
+
+\item other typsetting tools like {\LaTeX}; and
+
+\item unit tests and using existing tools for unit tests. \href{{https://docs.python.org/2/library/unittest.html}}{Python has extensive tools for this.}
+\end{enumerate}
+
+
+The notebooks can be used to hand in exercises and projects. They can
+provide the students with experience in presenting their work in the
+form of scientific/technical reports.
+
+Version control software allows teachers to bring in reproducibility
+of science as well as enhancing collaborative efforts among
+students. Using version control can also be used to help students
+present benchmark results, allowing others to verify their
+results. Unit testing is a central element in the development of
+numerical projects, from microtests of code fragments, to intermediate
+merging of functions to final tests of the correctness of a code.
+
+\subsection{Specific Algorithms for Basic Physics Courses}
+
+For a bachelor's degree in physics, it is now more and more common to require a compulsory
+programming course, typically taught during the first two years of
+undergraduate studies. The programming course, together with
+mathematics courses, lay the foundation for the use of computational
+exercises and projects in various physics courses. Based on this
+course, and the various mathematics courses included in a physics
+degree, there is a unique possibility to incorporate computational
+exercises and projects in various physics courses, without taking away
+the attention from the basic physics topics to be covered.
+
+What follows below is a suggested list of possible algorithms which could be included in central physics courses. The list is by no means exhaustive and is mainly meant as a
+guideline of what can be included. The examples we discuss in Sec. \ref{sec:examples}, illustrate how these algorithms can be included in courses like mechanics, quantum physics/mechanics, statistical and thermal physics and electromagnetism. These are all core courses in  typical bachelor's degree in physics.
+
 \subsection{Central Algorithms}
-{\bf THIS SECTION APPEARED OUT OF PLACE, OR, MORE SO, NOT QUITE ORGANIZED LIKE THE OTHERS. IT APPEARS TO BE A LIST OF ALGORITHMS WHILE THE OTHERS ARE A LIST OF OUTCOMES FOR STUDENTS. I'M NOT QUITE SURE WHAT TO DO WITH IT BECAUSE I THINK THERE'S VALUE IN NAMING THE ALGORITHMS, BUT THE FORMAT IS A BIT JARRING COMPARED TO THE REST OF THE CHAPTER.}
-The following mathematical formulations of problems from the physical sciences play a prominent role and should be reflected in how we teach physics:
 \begin{itemize}
 \item Ordinary differential equations
 \begin{enumerate}
@@ -522,21 +555,24 @@ The following mathematical formulations of problems from the physical sciences p
 
 
 In order to achieve a proper pedagogical introduction of these
-algorithms, it is important that students and teachers see how
-these algorithms are used to solve a variety of physics problems. The
-same algorithm, for example the solution of a second-order
-differential equation, can be used to solve the equations for the
-classical pendulum in a mechanics course or the (with a suitable
-change of variables) equations for a coupled RLC circuit in the
-electromagnetism course. Similarly, if students develop a program for
-studies of celestial bodies in the mechanics course, many of the
-elements of such a program can be reused in a molecular dynamics
-calculation in a course on statistical physics and thermal
-physics. The two-point boundary value problem for a buckling beam
-(discretized as an eigenvalue problem) can be reused in quantum
-mechanical studies of interacting electrons in oscillator traps, or
-just to study a particle in a box potential with varying depth and
-extension.
+algorithms, it is important that students and teachers see how these
+algorithms are used to solve a variety of physics problems. The same
+algorithm, for example the solution of a second-order differential
+equation, can be used to solve the equations for the classical
+pendulum in a mechanics course or the (with a suitable change of
+variables) equations for a coupled RLC circuit in the electromagnetism
+course. Similarly, if students develop a program for studies of
+celestial bodies in the mechanics course, many of the elements of such
+a program can be reused in a molecular dynamics calculation in a
+course on statistical physics and thermal physics. The two-point
+boundary value problem for a buckling beam (discretized as an
+eigenvalue problem) can be reused in quantum mechanical studies of
+interacting electrons in oscillator traps, or just to study a particle
+in a box potential with varying depth and extension. We discuss some
+selected examples in section \ref{sec:examples}. Our coming texbook
+\cite{DannyMortenBook} will contain a more exhaustive discussion of these, combined with
+a more detailed list of examples and a proper discussion of
+learning outcomes and possible assessment programs.
 
 In order to aid the introduction of computational exercises and
 projects, there is a strong need to develop educational resources.
@@ -554,235 +590,6 @@ Integration of Computation into Undergraduate physics, develops such
 \href{{http://www.compadre.org/PICUP/resources/}}{resources for teachers and students on the integration of
 computational material} \cite{PICUP}.
 We strongly recommend these resources.
-
-\subsection{Central Tools and Programming Languages}
-We will strongly recommend that Python is used as the high-level
- programming language. Other high-level environments like Mathematica
- and Matlab can also be presented and offered as special courses. This
- means that students can apply their knowledge from the basic programming course offered by most universities.
-Many university courses in programming  make use of Python, and extend their computational knowledge in
- various physics classes. We recommend  that the following
- tools are used:
-\begin{enumerate}
-\item \href{{http://jupyter.org/}}{jupyter and ipython notebooks};
-
-\item version control software like \href{{https://git-scm.com/}}{git} and repositories like \href{{https://github.com/}}{GitHub} and \href{{https://gitlab.com/}}{GitLab};
-
-\item other typsetting tools like {\LaTeX}; and
-
-\item unit tests and using existing tools for unit tests. \href{{https://docs.python.org/2/library/unittest.html}}{Python has extensive tools for this.}
-\end{enumerate}
-
-
-The notebooks can be used to hand in exercises and projects. They can
-provide the students with experience in presenting their work in the
-form of scientific/technical reports.
-
-Version control software allows teachers to bring in reproducibility
-of science as well as enhancing collaborative efforts among
-students. Using version control can also be used to help students
-present benchmark results, allowing others to verify their
-results. Unit testing is a central element in the development of
-numerical projects, from microtests of code fragments, to intermediate
-merging of functions to final test of the correctness of a code.
-
-\subsection{Suggested Learning Goals and Computational Topics for Specific Physics Courses}
-{\bf ONE THING THAT I NOTICED ACROSS THESE DIFFERENT COURSES IS THAT THE GOALS VARY IN SCALE AND SPECIFICITY. I'M WONDERING IF WE WANT TO SPEND THE TIME TO ADDRESS THAT OR LET IT COME UP IN EDITORIAL REVIEW. IT WILL TAKE SOME TIME TO ENSURE THE SAME SCALE AND SPECIFICITY, WHICH WE MAY NOT HAVE AT THE MOMENT.}
-For a bachelor's degree in physics, it is now more and more common to require a compulsory
-programming course, typically taught during the first two years of
-undergraduate studies. The programming course, together with
-mathematics courses, lay the foundation for the use of computational
-exercises and projects in various physics courses. Based on this
-course, and the various mathematics courses included in a physics
-degree, there is a unique possibility to incorporate computational
-exercises and projects in various physics courses, without taking away
-the attention from the basic physics topics to be covered.
-
-What follows below is a suggested list of possible learning
-outcomes. The list is by no means exhaustive and is mainly meant as a
-guideline of what can be included. The examples we discuss in Sec. \ref{sec:examples}, illustrate some of these learning outcomes.
-
-
-\subsubsection{Mechanics/Classical Mechanics.}
-After completing a course on mechanics, students should be able to:
-\begin{itemize}
-\item represent numbers, complex numbers, vectors, matrices as variables and do simple and appropriate mathematics on these;
-
-\item access constants and physical constants defined in libraries;
-
-\item construct and slice arrays;
-
-\item use functions defined in relevant libraries;
-
-\item write functions to perform specialized tasks;
-
-\item determine the root of an algebraic equation numerically using Newton's method;
-
-\item explain Newton's method for finding roots;
-
-\item solve a system of algebraic equations using Gaussian elimination numerically;
-
-\item explain Gaussian elimination;
-
-\item solve 1st Order, 2nd Order and Coupled ODEs numerically using Euler-Cromer, Verlet, and/or Runge-Kutta algorithms;
-
-\item explain the differences between each of the above algorithms;
-
-\item compare the quality of simulations (i.e., number of iterations, step size, and error control) of particle motion that use different motion prediction algorithms; and
-
-\item plot solutions.
-\end{itemize}
-
-
-\subsubsection{Thermal and Statistical Physics}
-After completing a course in thermal and statistical physics, students should be able to:
-\begin{itemize}
-\item use central probability distributions and their relation to various expectation values;
-
-\item simulate and visualize central probability distributions like the uniform distributions, the exponential distribution and the normal (Gaussian distribution);
-
-\item use concepts from statistics to understand central ensembles like the microcanonical and the canonical ensembles;
-
-\item simulate Markov processes and understand the links with the process of diffusion (Fick's and Fourier's laws) and the concept of most likely states;
-
-\item understand how to simulate stochastic variables using random number generators;
-
-\item understand central algorithms like the Metropolis algorithm to simulate systems in statistical physics;
-
-\item understand the physics of various phases and phase transitions;
-
-\item study systems like ideal gas and ideal crystals analytically and numerically;
-
-\item understand the link between various ensembles (both mathematical and physical links);
-
-\item be able to simulate phase transitions via models like the Ising class of models; and
-
-\item be able to perform molecular dynamics calculations using the velocity Verlet algorithm, simulate phase transitions, as well as visualize and analyze results using realistic interactions.
-\end{itemize}
-
-
-\subsubsection{Mathematical Methods in  Physics}
-After completing a course on mathematical methods in physics, students should be able to:
-\begin{itemize}
-\item understand how to discretize differential equations and understand the mathematical truncation errors;
-
-\item understand errors in mathematical algorithms;
-
-\item be able to rewrite differential equations using methods from linear algebra;
-
-\item know important algorithms for solving eigenvalue problems;
-
-\item be able to solve initial value and boundary value problems analytically and numerically;
-
-\item solve differential equations numerically and compare with analytical solutions;
-
-\item understand important orthogonal polynomials like Legendre, Hermite and Laguerre including being able to set up their recursion relations and visualize the polynomials;
-
-\item understand Fourier transforms and algorithms like Fast Fourier transform; and
-
-\item know tools to analyze time series.
-\end{itemize}
-
-
-Many of these algorithms can be discussed and used in the other courses discussed here.
-
-\subsubsection{Laboratory Course in Physics}
-{\bf THIS LOOKS LIKE IT'S FOR A MORE ADVANCED LAB, WHAT WE'D CALL BEYOND THE FIRST YEAR IN THE US. SHOULD WE DISTINUGIUSH OR FOCUS ON BFY LABS?}
-
-After completing a  laboratory course in physics, students should be able to:
-
-\begin{itemize}
-\item read data from CSV files constructed by oscilloscope or LabView program;
-
-\item rescale and plot these data;
-
-\item smooth, filter, and transform data as needed for specific experiments;
-
-\item compute numerical derivatives or integrals of data as needed for specific experiments;
-
-\item construct a linear fit, fit to exponentials, and a nonlinear fit to a sum of Gaussians or Lorentzians as needed for specific experiments;
-
-\item numerically determine location of peaks in data;
-
-\item perform a fast Fourier transform and construct a power spectrum of data as needed;
-
-\item make histograms from a single column of data;
-
-\item calculate mean, standard deviation of data;
-
-\item compare histogram to Poisson distribution with the same mean;
-
-\item numerically count number of peaks or dips in a spectrum;
-
-\item plot data and fits on same figure;
-
-\item numerically determine goodness of a fit using residuals; and
-
-\item propagate uncertainty when combining fit parameters using the covariance matrix.
-\end{itemize}
-
-
-\subsubsection{Quantum Mechanics/Physics}
-{\bf THESE SEEM STRANGELY SPECIFIC COMPARED TO THE OTHER COURSES; I ALSO COMMENTED OUT SOME OF THE CAVEATS FOR PARITY WITH OTHER LISTS.}
-After completing a course in quantum mechanics/physics, students should be able to:
-\begin{itemize}
-\item visualize the solutions of quantum mechanical problems, both stationary and time-dependent problems;
-
-\item scale the equations properly and understand the meaning of natural length scales, from the Bohr radius to simple harmonic oscillator problems with frequency dependent length scale; %The same scaling procedure is  used to derive the analytical solutions for several single-particle problems.
-
-\item use numerical methods for solving a large variety of one-dimensional differential equations with two-point boundary value problems;%. For many cases one can compare directly with standard analytical  solutions like the hydrogen-like problems or the harmonic oscillator.
-
-\item verification of numerical solutions with analytical results;%.
-
-\item rewrite Schroedinger's equation as an eigenvalue problem and use numerical eigenvalue methods for computing a single particle confined in a one-dimensional infinite potential and compare the result with analytical results; %This problem is the same as the eigenvalue problem of a buckling beam, which can be used the in the mechanics and mathematical methods course.
-
-\item use the the same eigenvalue solvers to study a single particle confined to move in a potential well with a finite depth and extension;%. Study both bound and unbound states and explore the numerical solutions as functions of the potential depth and the extension of the potential.
-
-\item visualize the probability distributions for electrons (or other one-particle problems) confined to move in hydrogen-like and harmonic oscillator like problems;
-\item compare the probability distributions for ground and excited states;
-\item discuss unbound states with a finite potential well;
-
-
-\item rewrite a two-electron (or two-particle problem) problem in terms of the relative and center-of-mass motion and study the role of repulsive Coulomb forces) for electrons (or other fermions) trapped; and
-
-\item visualize and compute tunneling phenomena for various potentials.
-
-\end{itemize}
-
-
-\subsubsection{Electromagnetism}
-After completing a course in electromagnetism, students should be able to:
-\begin{itemize}
-\item use symbolic computing  tools to determine the gradient of various scalar fields;
-
-\item use symbolic computing  to determine the divergence and curl of various vector fields;
-
-\item represent the vector (e.g., electric) field visually using vector plots and stream plots;
-
-\item represent a 2D scalar (i.e., potential) field visually using 2D contour plots and 3D surface plots;
-
-\item apply motion prediction algorithms Euler, Verlet, and Runge-Kutta to model the motion of charged particles in electric and magnetic fields;
-
-\item compare the quality of simulations (i.e., number of iterations, step size, and error control) of charged particle motion that use different motion prediction algorithms;
-
-\item apply Coulomb's law iteratively to determine the electric field produced by a given charge distribution;
-
-\item apply Biot-Savart's law iteratively to determine the magnetic field produced by a given current distribution;
-
-\item explain how the application of superposition iteratively gives rise to approximate field solutions;
-
-\item explain how the simple relaxation algorithm works (i.e., iteratively averaging neighboring points) and how it is derived from the properties of the solutions to Laplace's equation;
-
-\item apply this simple relaxation method to find the potential for 1D and 2D electrostatic situations where Laplace's equation is satisfied;
-
-\item explain how to use  finite-difference methods to recast Poisson's equation into a discrete formulation and how the resulting discretized form compares with the simple relaxation method (i.e., iteratively averaging neighboring points);
-
-\item apply the Jacobi and Gauss-Seidel methods to solve 2D Laplace and Poisson problems including graphing the results in three dimensions;
-
-\item explain the differences between the Jacobi and Gauss-Seidel methods and how these methods are connected to the derivation using finite differencing; and
-
-\item compare the quality of the simulations (i.e., number of iterations, step size, and error control) that employ the Jacobi method and the Gauss-Seidel method.
-\end{itemize}
 
 
 \subsubsection{Advanced Computational Physics Courses}
@@ -865,7 +672,7 @@ Crucial ingredients for the success of the computing in Science
 Education project has been the support from governing bodies as well
 as extensive cooperations across departmental boundaries. And finally,
 the willingness of several university teachers and researchers to give
-priority to teaching reforms.
+priority to teaching reforms and course transformations.
 
 In addition to the above, over the years we have coordinated the use
 of computational exercises and numerical tools in most undergraduate
@@ -938,7 +745,11 @@ a = 1;  b = 3; n = 1000
 result = Trapez(a,b,f1,n)
 print(result)
 \end{lstlisting}
-Here we have defined an integral given by $I=\int_1^3 dx \exp{(-x^2)}*\log{(1+x\sin{(x)})}$.
+Here we have defined an integral given by 
+\[
+I=\int_1^3 dx \exp{(-x^2)}\log{(1+x\sin{(x)})}.
+\]
+
 
 Coming back to the above learning outcomes, we would like to emphasize that
 Python offers an  extremely versatile programming  environment, allowing for
@@ -1040,15 +851,15 @@ of integration points. The students get trained from day one to think
 error analysis. Figure \ref{fig:error}  shows clearly the region where the
 relative error starts increasing.  The mathematical error which
 follows the trapezoidal rule goes as $O(h^2)$ where $h$ is the chosen
-numerical step size. It is proportional to the inverse of the number of integration points.
+numerical step size. It is proportional to the inverse of the number of integration points $n$, that is $h\propto 1/n$. 
 
 Before numerical round-off errors and loss of
 numerical precision kick in (near $h\sim 10^{-6}$) we see that the
 relative error in the log-log plot has a slope which follows the
 mathematical error.
 
-There are several additional benefits here. In
-this process we can easily bake in how to structure a code in terms of
+There are several additional benefits here. The general learning outcomes on computing can be included as in for example the following ways. We 
+can easily bake in how to structure a code in terms of
 functions and modules, or how to read input data flexibly from the
 command line or how to write unit tests etc.  The conventions and
 techniques outlined here will save students a lot of time when one
@@ -1070,14 +881,15 @@ can be studied and solved with eigenvalue solvers.
 Let us start with initial value problems and ordinary differential
 equations. Such equations appear in a wealth of physics
 applications. Typical examples students will encounter are the
-classical pendulum in a mechanics course, and RLC circuit in
+classical pendulum in a mechanics course, an RLC circuit in the course on 
 electromagnetism, the modeling of the Solar system in an Astrophysics
 course and many other cases.  The essential message is that, with
 properly scaled equations, students can use essentially the
 same algorithms to solve these problems, either starting with
-a simple modified Euler algorithms or a Runge-Kutta class of
-algorithms or perhaps the so-called Verlet class of algorithms. The
-idea is that algorithms students develop and use in one course can be
+a simple modified Euler algorithm or a Runge-Kutta class of
+algorithms or the so-called Verlet class of algorithms, to mention a few. 
+
+The idea is that algorithms students develop and use in one course can be
 reused in other courses.  This allows  students to make the
 relevant abstractions discussed above, opening up for a much wider
 range of applicabilities.
@@ -1092,27 +904,31 @@ for abstractions and hopefully see how the problems studied in say a
 mechanics course can be transferred to other fields.
 
 The classical pendulum with damping and external force as it could
-appear in a mechanics course is given by the following eqaution of
+appear in a mechanics course is given by the following equation of
 motion for the angle $\theta$ as function of time $t$
 \[
   ml\frac{d^2\theta}{dt^2}+\nu\frac{d\theta}{dt}  +mgsin(\theta)=Acos(\omega t),
 \]
 where $m$ is its mass, $l$ the length, $\nu$ a damping factor and $A$
 the amplitude of an applied external source with frequency
-$\omega$. The solution of this equation is something the students
-encounter the first semester in the courses IN1900 and
-MAT-INF1100. With this background, students are familiar with the numerical solution and visualization of such equations.
-If we now move to a course on
-electromagnetism, we encounter almost the same equation for an RLC
-circuit, namely
+$\omega$. The solution of this type of equations (second-order
+differential equations with given initial conditions) is something the
+students encounter the first semester thorugh the courses IN1900 and
+MAT-INF1100 at the University of Oslo. At Michigan State University
+there is now a compulsory course for physics majors that includes many
+of these elements.  With this background, students are already familiar with
+the numerical solution and visualization of such equations.  
+If we now
+move to a course on electromagnetism, we encounter almost the same
+equation for an RLC circuit, namely
 \[
 L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=Acos(\omega t),
 \]
 where $L$ is the inductance, $R$ the applied resistance, $Q$ the
 time-dependent charge and $C$ the capacitance.
 
-We consider first the
-classical pendulum equations with damping and an external force and  define the velocity $v$ as
+Let us consider first the classical pendulum equations with damping and an
+external force and define the scaled velocity $\hat{v}$ as
 \[
    \frac{d\theta}{d\hat{t}} =\hat{v},
 \]
@@ -1149,8 +965,8 @@ comes normally before the course on electromagnetism) can then be
 reused in the electromagnetism course, with a great potential for
 further abstraction.
 
-Let us now move to another frequently encountered problems in several
-physics courses, namely that of two-point boundary value problems. In
+Let us now move to another frequently encountered problem in several
+physics courses, namely that of a two-point boundary value problem. In
 the examples below we will see again that if the equations are
 properly scaled, we can reuse the same algorithm for solving different
 physics problems. Here we will start with the equations for a buckling
@@ -1275,9 +1091,9 @@ we determine $\alpha$  so that
 \frac{mk}{\hbar^2} \alpha^4 = 1,
 \]
 and it defines a natural length scale in terms of the various physical
-constants that determine the equation.  We have
+constants that determine the equation.  The final expression, inserting $k=m\omega^2$ is 
 \[
-\alpha = \left(\frac{\hbar^2}{mk}\right)^{1/4}.
+\alpha = \left(\frac{\hbar}{m\omega}\right)^{1/2}.
 \]
 If we were to replace the harmonic oscillator potential with the
 attractive Coulomb interaction from the hydrogen atom, the  parameter $\alpha$ would equal the Bohr
@@ -1305,7 +1121,7 @@ and the non-diagonal matrix element
 \[
    e_i=-\frac{1}{h^2},
 \]
-we can rewrite the Schr\"oedinger equation a
+we can rewrite the Schr\"oedinger equation as
 \[
 d_iu_i+e_{i-1}v_{i-1}+e_{i+1}v_{i+1}  = \lambda v_i,
 \]
@@ -1338,12 +1154,8 @@ or if we wish to be more detailed, we can write the tridiagonal matrix as
                                 0   & \dots & \dots & \dots  &\dots       &-\frac{1}{h^2} & \frac{2}{h^2}+V_{n}
              \end{bmatrix}.
 \]
-Recall that the solutions are known via the boundary conditions at
-$i={n+1}$ and at the other end point, that is for  $\rho_0$.
-The solution is zero in both cases.
 
-
-The following Python code sets up the Hamiltonian matrix by defining
+The following Python code sets up the matrix to diagonalize by defining
 the minimun and maximum values of $r$ with a maximum value of
 integration points. It plots the eigenfunctions of the three lowest
 eigenstates.
@@ -1413,7 +1225,7 @@ plt.show()
 \end{lstlisting}
 
 
-The last example shows the potential of combining numerical algorithms with analytical results (or eventually symbolic calculations), allowing thereby students to test both their physics understanding. One can easily switch to other potentials by simply redefining the potential function. For example, a finite box potential can easily be defined as
+The last example shows the potential of combining numerical algorithms with analytical results (or eventually symbolic calculations), allowing thereby students to test their physics understanding. One can easily switch to other potentials by simply redefining the potential function. For example, a finite box potential can easily be defined as
 \begin{lstlisting}
 # Finite depth and range box potential, with strength V and range a
 def potential(r):
@@ -1444,9 +1256,11 @@ algorithms.
 
 The above example allows the student to test the mathematical error of
 the algorithm for the eigenvalue solver by simply changing the number
-of integration points. The students get trained from day one to think
-error analysis.  The algorithm can be tailored to any kind of
-one-particle problem used in quantum mechanics.
+of integration points. Again, as discussed above in connection with
+the trapezoidal rule, the students get trained to develop an
+understanding of the error analysis and where things can go wrong. The
+algorithm can be tailored to any kind of one-particle problem used in
+quantum mechanics.
 
 A simple rewrite allows for the reuse in linear algebra problems for
 solution of say Poisson's equation in electromagnetism, or the
@@ -1502,7 +1316,7 @@ our problem becomes now a classical linear algebra problem
 \mathbf{A}\mathbf{v}=\mathbf{f},
 \]
 with the unknown function $\mathbf{v}$. Using standard LU
-decomposition algorithms \cite{LUalgo,Thomasalgo} (here one can use
+decomposition algorithms \cite{GolubVanLoan} (here one can use
 the so-called Thomas algorithm which reduces the number of floating
 point operations to $O(n)$) one can easily find the solution to this
 problem.
@@ -1528,8 +1342,8 @@ our algorithms and programs. The analytical results can either be
 included explicitely or via symbolic software like Python's Sympy.
 Thus, computing stands indeed for solving scientific problems using
 all possible tools, including symbolic computing, computers and
-numerical algorithms, experiments and analytical paper and pencil
-solutions.
+numerical algorithms, numerical experiments (as well as real
+experiments if possible) and analytical paper and pencil solutions.
 
 The cases we have presented here represent only a limited set of
 examples. A longer version of this article, with more examples and
@@ -1547,7 +1361,6 @@ sector.
 
 \section{Conclusions and Perspectives}
 
-Will be finalized later.
 
 
 \begin{itemize}
@@ -1585,16 +1398,33 @@ Will be finalized later.
 
 
 \begin{acknowledgement}
-M.~H.~J. acknowledges U.S. National Science Foundation  Grant No. PHY-1404159.
+DMC's work is supported by 
+MHJ's work is supported by U.S. National Science Foundation  Grant No.~PHY-1404159. 
+Both authors acknowlegde support from the recently established center of excellence 
+the Center for Computing in Science Education, University of Oslo, Norway.
 \end{acknowledgement}
 
 
-\bibliographystyle{spphys}
 
-\bibliography{addbib}
 
+\begin{thebibliography}{99}
+\bibitem{ACM2013} Association for Computing Machinery, 2013, \url{{http://pathways.acm.org/executive-summary.html}}.
+\bibitem{CSEUiO} Computing in Science Education project, University of Oslo, Norway, 
+\bibitem{CCSEUiO}Center for Computing in Science Education, University of Oslo, Norway,  \url{{http://www.mn.uio.no/ccse/english/}}.
+\bibitem{PICUP} Partnership for Integration of Computation into Undergraduate Physics, \url{{http://www.compadre.org/picup/}}{PICUP project}.
+\bibitem{PERLMSU} Physics Education Research Group at Michigan State University, \url{https://perl.natsci.msu.edu/}.
+\bibitem{AMS2015} 
+Anders Malthe-S{\o}renssen, {\em Elementary Mechanics Using Python}, 
+Undergraduate Lecture Notes in Physics (Springer, Berlin, 2015).
+\bibitem{AIV2018} Arnt Inge Vistnes, {\em Waves and Motion}, in press, Undergraduate Texts in Physics (Springer, Berlin, 2018).
+\bibitem{AMSDS2019} Anders Malthe-S{\o}renssen and Dag Kristian Dysthe, {\em Statistical and Thermal Physics}, in press,  Undergraduate Texts in Physics (Springer, Berlin, 2018/2019).
+\bibitem{SymPy} Symbolic Python, \href{http://www.sympy.org/en/index.html}.
+\bibitem{GolubVanLoan} Gene H.~Golub and Charles F.~Van Loan, {\em Matrix Computations} (The Johns Hopkins University Press, 1996, Baltimore and London). 
+\bibitem{DannyMortenBook} Daniel Marcos Caballero and Morten Hjorth-Jensen, {\em Integrating a Computational Perspective in Physics Courses}, in preparation.
+\end{thebibliography}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
+
