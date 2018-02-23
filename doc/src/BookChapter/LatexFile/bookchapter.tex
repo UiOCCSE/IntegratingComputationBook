@@ -585,7 +585,8 @@ results. Unit testing is a central element in the development of
 numerical projects, from microtests of code fragments, to intermediate
 merging of functions to final test of the correctness of a code.
 
-\subsection{Suggested Learning Goals and Computational Topics for Specific physics Courses}
+\subsection{Suggested Learning Goals and Computational Topics for Specific Physics Courses}
+{\bf ONE THING THAT I NOTICED ACROSS THESE DIFFERENT COURSES IS THAT THE GOALS VARY IN SCALE AND SPECIFICITY. I'M WONDERING IF WE WANT TO SPEND THE TIME TO ADDRESS THAT OR LET IT COME UP IN EDITORIAL REVIEW. IT WILL TAKE SOME TIME TO ENSURE THE SAME SCALE AND SPECIFICITY, WHICH WE MAY NOT HAVE AT THE MOMENT.}
 For a bachelor's degree in physics, it is now more and more common to require a compulsory
 programming course, typically taught during the first two years of
 undergraduate studies. The programming course, together with
@@ -685,60 +686,65 @@ After completing a course on mathematical methods in physics, students should be
 Many of these algorithms can be discussed and used in the other courses discussed here.
 
 \subsubsection{Laboratory Course in Physics}
+{\bf THIS LOOKS LIKE IT'S FOR A MORE ADVANCED LAB, WHAT WE'D CALL BEYOND THE FIRST YEAR IN THE US. SHOULD WE DISTINUGIUSH OR FOCUS ON BFY LABS?}
+
 After completing a  laboratory course in physics, students should be able to:
 
 \begin{itemize}
-\item read data from CSV files constructed by oscilloscope or LabView program
+\item read data from CSV files constructed by oscilloscope or LabView program;
 
-\item rescale and plot these data
+\item rescale and plot these data;
 
-\item smooth, filter, and transform data as needed for specific experiments
+\item smooth, filter, and transform data as needed for specific experiments;
 
-\item compute numerical derivatives or integrals of data as needed for specific experiments
+\item compute numerical derivatives or integrals of data as needed for specific experiments;
 
-\item construct a linear fit, fit to exponentials, and a nonlinear fit to a sum of Gaussians or Lorentzians as needed for specific experiments
+\item construct a linear fit, fit to exponentials, and a nonlinear fit to a sum of Gaussians or Lorentzians as needed for specific experiments;
 
-\item numerically determine location of peaks in data
+\item numerically determine location of peaks in data;
 
-\item perform a fast Fourier transform and construct a power spectrum of data as needed
+\item perform a fast Fourier transform and construct a power spectrum of data as needed;
 
-\item make histograms from a single column of data
+\item make histograms from a single column of data;
 
-\item calculate mean, standard deviation of data
+\item calculate mean, standard deviation of data;
 
-\item compare histogram to Poisson distribution with the same mean
+\item compare histogram to Poisson distribution with the same mean;
 
-\item numerically count number of peaks or dips in a spectrum
+\item numerically count number of peaks or dips in a spectrum;
 
-\item plot data and fits on same figure
+\item plot data and fits on same figure;
 
-\item numerically determine goodness of a fit using residuals
+\item numerically determine goodness of a fit using residuals; and
 
-\item propagating uncertainty when combining fit parameters using the covariance matrix
+\item propagate uncertainty when combining fit parameters using the covariance matrix.
 \end{itemize}
 
 
 \subsubsection{Quantum Mechanics/Physics}
+{\bf THESE SEEM STRANGELY SPECIFIC COMPARED TO THE OTHER COURSES; I ALSO COMMENTED OUT SOME OF THE CAVEATS FOR PARITY WITH OTHER LISTS.}
 After completing a course in quantum mechanics/physics, students should be able to:
 \begin{itemize}
-\item be able to visualize the solutions of quantum mechanical problems, both stationary and time-dependent problems
+\item visualize the solutions of quantum mechanical problems, both stationary and time-dependent problems;
 
-\item be able to scale the equations properly and understand the meaning of natural length scales, from the Bohr radius to simple harmonic oscillator problems with frequency dependent length scale. The same scaling procedure is  used to derive the analytical solutions for several single-particle problems.
+\item scale the equations properly and understand the meaning of natural length scales, from the Bohr radius to simple harmonic oscillator problems with frequency dependent length scale; %The same scaling procedure is  used to derive the analytical solutions for several single-particle problems.
 
-\item use numerical methods for solving a large variety of one-dimensional differential equations with two-point boundary value problems. For many cases one can compare directly with standard analytical  solutions like the hydrogen-like problems or the harmonic oscillator.
+\item use numerical methods for solving a large variety of one-dimensional differential equations with two-point boundary value problems;%. For many cases one can compare directly with standard analytical  solutions like the hydrogen-like problems or the harmonic oscillator.
 
-\item verification of numerical solutions with analytical results.
+\item verification of numerical solutions with analytical results;%.
 
-\item be able to rewrite Schroedinger's equation as an eigenvalue problem and use numerical eigenvalue methods for computing  a single particle confined in a one-dimensional infinite potential and compare with analytical results. This problem is the same as the eigenvalue problem of a buckling beam, which can be used the in the mechanics and mathematical methods course.
+\item rewrite Schroedinger's equation as an eigenvalue problem and use numerical eigenvalue methods for computing a single particle confined in a one-dimensional infinite potential and compare the result with analytical results; %This problem is the same as the eigenvalue problem of a buckling beam, which can be used the in the mechanics and mathematical methods course.
 
-\item use the the same eigenvalue solvers to study a single particle confined to move in a potential well with a finite depth and extension. Study both bound and unbound states and explore the numerical solutions as functions of the potential depth and the extension of the potential.
+\item use the the same eigenvalue solvers to study a single particle confined to move in a potential well with a finite depth and extension;%. Study both bound and unbound states and explore the numerical solutions as functions of the potential depth and the extension of the potential.
 
-\item visualize the probability distributions for electrons (or other one-particle problems) confined to move in hydrogen*like and harmonic oscillator like problems. Study the probability distributions for ground and excited states. Discuss unbound states with a finite potential well.
+\item visualize the probability distributions for electrons (or other one-particle problems) confined to move in hydrogen-like and harmonic oscillator like problems;
+\item compare the probability distributions for ground and excited states;
+\item discuss unbound states with a finite potential well;
 
 
-\item rewrite a two-electron (or two-particle problem) problem in terms of the relative and center-of-mass motion and study the role of repulsive Coulomb forces) for electrons (or other fermions) trapped
+\item rewrite a two-electron (or two-particle problem) problem in terms of the relative and center-of-mass motion and study the role of repulsive Coulomb forces) for electrons (or other fermions) trapped; and
 
-\item visualize and compute tunneling phenomena for various potentials
+\item visualize and compute tunneling phenomena for various potentials.
 
 \end{itemize}
 
@@ -746,45 +752,45 @@ After completing a course in quantum mechanics/physics, students should be able 
 \subsubsection{Electromagnetism}
 After completing a course in electromagnetism, students should be able to:
 \begin{itemize}
-\item use symbolic computing  tools to determine the gradient of various scalar fields
+\item use symbolic computing  tools to determine the gradient of various scalar fields;
 
-\item use symbolic computing  to determine the divergence and curl of various vector fields
+\item use symbolic computing  to determine the divergence and curl of various vector fields;
 
-\item represent the vector (e.g., electric) field visually using vector plots and stream plots
+\item represent the vector (e.g., electric) field visually using vector plots and stream plots;
 
-\item represent a 2D scalar (i.e., potential) field visually using 2D contour plots and 3D surface plots
+\item represent a 2D scalar (i.e., potential) field visually using 2D contour plots and 3D surface plots;
 
-\item apply motion prediction algorithms Euler, Verlet, and Runge-Kutta to model the motion of charged particles in electric and magnetic fields
+\item apply motion prediction algorithms Euler, Verlet, and Runge-Kutta to model the motion of charged particles in electric and magnetic fields;
 
-\item compare the quality of simulations (i.e., number of iterations, step size, and error control) of charged particle motion that use different motion prediction algorithms
+\item compare the quality of simulations (i.e., number of iterations, step size, and error control) of charged particle motion that use different motion prediction algorithms;
 
-\item apply Coulomb's law iteratively to determine the electric field produced by a given charge distribution
+\item apply Coulomb's law iteratively to determine the electric field produced by a given charge distribution;
 
-\item apply Biot-Savart's law iteratively to determine the magnetic field produced by a given current distribution
+\item apply Biot-Savart's law iteratively to determine the magnetic field produced by a given current distribution;
 
-\item explain how the application of superposition iteratively gives rise to approximate field solutions
+\item explain how the application of superposition iteratively gives rise to approximate field solutions;
 
-\item explain how the simple relaxation algorithm works (i.e., iteratively averaging neighboring points) and how it is derived from the properties of the solutions to Laplace's equation
+\item explain how the simple relaxation algorithm works (i.e., iteratively averaging neighboring points) and how it is derived from the properties of the solutions to Laplace's equation;
 
-\item apply this simple relaxation method to find the potential for 1D and 2D electrostatic situations where Laplace's equation is satisfied
+\item apply this simple relaxation method to find the potential for 1D and 2D electrostatic situations where Laplace's equation is satisfied;
 
-\item explain how to use  finite-difference methods to recast Poisson's equation into a discrete formulation and how the resulting discretized form compares with the simple relaxation method (i.e., iteratively averaging neighboring points)
+\item explain how to use  finite-difference methods to recast Poisson's equation into a discrete formulation and how the resulting discretized form compares with the simple relaxation method (i.e., iteratively averaging neighboring points);
 
-\item apply the Jacobi and Gauss-Seidel methods to solve 2D Laplace and Poisson problems including graphing the results in three dimensions
+\item apply the Jacobi and Gauss-Seidel methods to solve 2D Laplace and Poisson problems including graphing the results in three dimensions;
 
-\item explain the differences between the Jacobi and Gauss-Seidel methods and how these methods are connected to the derivation using finite differencing
+\item explain the differences between the Jacobi and Gauss-Seidel methods and how these methods are connected to the derivation using finite differencing; and
 
-\item compare the quality of the simulations (i.e., number of iterations, step size, and error control) that employ the Jacobi method and the Gauss-Seidel method
+\item compare the quality of the simulations (i.e., number of iterations, step size, and error control) that employ the Jacobi method and the Gauss-Seidel method.
 \end{itemize}
 
 
 \subsubsection{Advanced Computational Physics Courses}
 Towards the end of undergraduate studies it is useful to offer a course which focuses on more advanced algorithms and presents compiled languages like C++ and Fortran, languages our students will meet in actual research.
-Furthemore, such a course should offer more advanced projects which train the students in actual research, developing more complicated programs and working on larger projects.
+Furthermore, such a course should offer more advanced projects which train the students in actual research, developing more complicated programs and working on larger projects.
 
 \subsection{Physics Education Research and Computing in Science Education}
 The introduction of computational elements in the various courses should be, if possible,  strongly integrated with ongoing research on physics education.
-The Physics and Astronomy department at MSU is in a unique position due to its strong research group in physics education, the \href{{http://www.pa.msu.edu/research/physics-education-lab}}{PERL group} \cite{PERLMSU}. Together with the Center for computing in Science Education at the University of Oslo \cite{CCSEUiO}, we are now in the process
+The Physics and Astronomy department at MSU is in a unique position due to its strong research group in physics education, the \href{{http://www.pa.msu.edu/research/physics-education-lab}}{PERL group} \cite{PERLMSU}. Together with the Center for Computing in Science Education at the University of Oslo \cite{CCSEUiO}, we are now in the process
 of establishing new assessments
 and assessment methods that address several issues associated with
 integrating computing into science courses. The issues include but
@@ -816,7 +822,9 @@ The learning objectives and learning outcomes for computational
 methods developed as part of the first objective form parts of the
 basis for the assessment program, and we will also investigate the
 assessment of non-content learning goals such as self-efficacy and
-identity formation.
+identity formation. Identifying and investigating the role of such non-content
+factors will be critical to support all students in achieving our computational
+learning goals.
 
 The effect of integration of computational methods into basic science
 courses have been sparsely studied, primarily because the practice is
