@@ -517,7 +517,7 @@ guideline of what can be included. The examples we discuss in Sec. \ref{sec:exam
 \item Partial differential equations
 \begin{enumerate}
 
-  \item Diffusion in one and two dimensions (statistical physics), wave equation in one and two dimensions. These are examples of physics cases which could apper in courses on  mechanics, electromagnetism, quantum mechanics, methods for theoretical physics and Laplace's and Poisson's equations (electromagnetism).
+  \item Diffusion in one and two dimensions (statistical physics), wave equation in one and two dimensions. These are examples of physics cases which could apper in courses on  mechanics, electromagnetism, quantum mechanics, methods for theoretical physics and Laplace's and Poisson's equations in  a course on electromagnetism.
 
 \end{enumerate}
 
@@ -525,17 +525,17 @@ guideline of what can be included. The examples we discuss in Sec. \ref{sec:exam
 \item Numerical integration
 \begin{enumerate}
 
-  \item Trapezoidal and Simpson's rule and Monte Carlo integration. Applications in statistical physics, methods of theoretical physics, electromagnetism and quantum mechanics.
+  \item Trapezoidal and Simpson's rule and Monte Carlo integration. Here one can envision applications in statistical physics, methods of theoretical physics, electromagnetism and quantum mechanics.
 
 \end{enumerate}
 
 
-\item Statistical analysis, random numbers, random walks, probability distributions, Monte Carlo integration and Metropolis algorithm. Applications to statistical physics and laboratory courses.
+\item Statistical analysis, random numbers, random walks, probability distributions, Monte Carlo integration and Metropolis algorithm. These are algorithms with important applications to statistical physics and laboratory courses.
 
 \item Linear Algebra and eigenvalue problems.
 \begin{enumerate}
 
-  \item Gaussian elimination, LU-decomposition, eigenvalue solvers, and iterative methods like  Jacobi or Gauss-Seidel for systems of linear equations. Important for several courses, classical mechanics, methods of theoretical physics, electromagnetism and quantum mechanics.
+  \item Gaussian elimination, LU-decomposition, eigenvalue solvers, and iterative methods like  Jacobi or Gauss-Seidel for systems of linear equations. These algorithms are important for several courses, classical mechanics, methods of theoretical physics, electromagnetism and quantum mechanics.
 
 \end{enumerate}
 
@@ -543,7 +543,7 @@ guideline of what can be included. The examples we discuss in Sec. \ref{sec:exam
 \item Signal processing
 \begin{enumerate}
 
-  \item Discrete (fast) Fourier transforms, Lagrange/spline/Fourier interpolation, numeric convolutions {\&} circulant matrices, filtering. Applications in electromagnetics, quantum mechanics, and experimental physics (data acquisition)
+  \item Discrete (fast) Fourier transforms, Lagrange/spline/Fourier interpolation, numeric convolutions {\&} circulant matrices, filtering. Here we can think of applications in electromagnetism, quantum mechanics, and experimental physics (data acquisition)
 
 \end{enumerate}
 
@@ -754,7 +754,7 @@ I=\int_1^3 dx \exp{(-x^2)}\log{(1+x\sin{(x)})}.
 Coming back to the above learning outcomes, we would like to emphasize that
 Python offers an  extremely versatile programming  environment, allowing for
 the inclusion of analytical studies in a numerical program. Here we show an
-example code with the \textbf{trapezoidal rule} using Python's symbolic package \textbf{SymPy} \cite{SymPy} to evaluate an integral and compute the absolute error
+example code with the trapezoidal rule using Python's symbolic package \textbf{SymPy} \cite{SymPy} to evaluate an integral and compute the absolute error
 with respect to the numerically evaluated one of the integral
 $\int_0^1 dx x^2 = 1/3$. This is in shown in the following code part
 \begin{lstlisting}
@@ -995,7 +995,7 @@ We scale the equation with $x = \rho L$ and $\rho \in [0,1]$ and get
 \[
 \frac{d^2 v(\rho)}{dx^2} +K v(\rho)=0,
 \]
-which is nothing but a standard eigenvalue problem with $K=
+which is, when discretized (see below), nothing but a standard eigenvalue problem with $K=
 FL^2/R$. Here we can assume that either the force $F$ or the material
 specific rigidity $R$ are unknown.  If we replace $R=-\hbar^2/2m$ and
 $-F=\lambda$, we have the quantum mechanical variant for a particle
@@ -1035,7 +1035,7 @@ solved.
 
 If we stay with quantum mechanical one-body problems (or
 special interacting two-body problems) adding a potential along the
-diagonals allows us to reuse this problem for many types of physics
+diagonal elements allows us to reuse this problem for many types of physics
 cases.  To see this, let us assume we are interested in the solution
 of the radial part of Schr\"odinger's equation for one electron. This
 equation reads
@@ -1085,12 +1085,12 @@ We multiply thereafter with $2m\alpha^2/\hbar^2$ on both sides and obtain
        + \frac{mk}{\hbar^2} \alpha^4\rho^2v(\rho)  = \frac{2m\alpha^2}{\hbar^2}E v(\rho) .
 \]
 
-A natural length scale comes out automatically when scaling. To see this,
-we determine $\alpha$  so that
+A natural length scale comes out automatically when scaling. To see this, since $\alpha$ is constant we are left to determine, 
+we determine $\alpha$ by requiring that
 \[
-\frac{mk}{\hbar^2} \alpha^4 = 1,
+\frac{mk}{\hbar^2} \alpha^4 = 1.
 \]
-and it defines a natural length scale in terms of the various physical
+This defines a natural length scale in terms of the various physical
 constants that determine the equation.  The final expression, inserting $k=m\omega^2$ is
 \[
 \alpha = \left(\frac{\hbar}{m\omega}\right)^{1/2}.
@@ -1110,8 +1110,8 @@ we can rewrite Schroedinger's equation as
   -\frac{d^2}{d\rho^2} v(\rho) + \rho^2v(\rho)  = \lambda v(\rho) .
 \]
 This is similar to the equation for a buckling beam, except for the
-potential term.  In three dimensions the eigenvalues for $l=0$ are
-$\lambda_0=1.5,\lambda_1=3.5,\lambda_2=5.5,\dots .$
+potential term.  In three dimensions with our scaling, the eigenvalues for $l=0$ are
+$\lambda_0=3,\lambda_1=7,\lambda_2=11,\dots .$
 
 If we  define first the diagonal matrix element
 \[
@@ -1182,9 +1182,9 @@ RMin, RMax, lOrbital, Dim = initialize()
 
 #Initialize constants
 Step    = RMax/(Dim)
-DiagConst = 1.0/ (Step*Step)
-NondiagConst =  -0.5 / (Step*Step)
-OrbitalFactor = 0.5*lOrbital * (lOrbital + 1.0)
+DiagConst = 2.0/ (Step*Step)
+NondiagConst =  -1.0 / (Step*Step)
+OrbitalFactor = lOrbital * (lOrbital + 1.0)
 
 #Calculate array of potential values
 v = np.zeros(Dim)
@@ -1339,7 +1339,7 @@ opens up for studies of many more interesting and realistic problems.
 However, we have seen that in order to verify and validate our codes,
 the existence of analytical solutions offer us an invaluable test of
 our algorithms and programs. The analytical results can either be
-included explicitely or via symbolic software like Python's Sympy.
+included explicitely or via symbolic software like Python's Sympy package.
 Thus, computing stands indeed for solving scientific problems using
 all possible tools, including symbolic computing, computers and
 numerical algorithms, numerical experiments (as well as real
