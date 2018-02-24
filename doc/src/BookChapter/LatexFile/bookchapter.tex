@@ -745,7 +745,7 @@ a = 1;  b = 3; n = 1000
 result = Trapez(a,b,f1,n)
 print(result)
 \end{lstlisting}
-Here we have defined an integral given by 
+Here we have defined an integral given by
 \[
 I=\int_1^3 dx \exp{(-x^2)}\log{(1+x\sin{(x)})}.
 \]
@@ -851,14 +851,14 @@ of integration points. The students get trained from day one to think
 error analysis. Figure \ref{fig:error}  shows clearly the region where the
 relative error starts increasing.  The mathematical error which
 follows the trapezoidal rule goes as $O(h^2)$ where $h$ is the chosen
-numerical step size. It is proportional to the inverse of the number of integration points $n$, that is $h\propto 1/n$. 
+numerical step size. It is proportional to the inverse of the number of integration points $n$, that is $h\propto 1/n$.
 
 Before numerical round-off errors and loss of
 numerical precision kick in (near $h\sim 10^{-6}$) we see that the
 relative error in the log-log plot has a slope which follows the
 mathematical error.
 
-There are several additional benefits here. The general learning outcomes on computing can be included as in for example the following ways. We 
+There are several additional benefits here. The general learning outcomes on computing can be included as in for example the following ways. We
 can easily bake in how to structure a code in terms of
 functions and modules, or how to read input data flexibly from the
 command line or how to write unit tests etc.  The conventions and
@@ -881,13 +881,13 @@ can be studied and solved with eigenvalue solvers.
 Let us start with initial value problems and ordinary differential
 equations. Such equations appear in a wealth of physics
 applications. Typical examples students will encounter are the
-classical pendulum in a mechanics course, an RLC circuit in the course on 
+classical pendulum in a mechanics course, an RLC circuit in the course on
 electromagnetism, the modeling of the Solar system in an Astrophysics
 course and many other cases.  The essential message is that, with
 properly scaled equations, students can use essentially the
 same algorithms to solve these problems, either starting with
 a simple modified Euler algorithm or a Runge-Kutta class of
-algorithms or the so-called Verlet class of algorithms, to mention a few. 
+algorithms or the so-called Verlet class of algorithms, to mention a few.
 
 The idea is that algorithms students develop and use in one course can be
 reused in other courses.  This allows  students to make the
@@ -917,7 +917,7 @@ students encounter the first semester thorugh the courses IN1900 and
 MAT-INF1100 at the University of Oslo. At Michigan State University
 there is now a compulsory course for physics majors that includes many
 of these elements.  With this background, students are already familiar with
-the numerical solution and visualization of such equations.  
+the numerical solution and visualization of such equations.
 If we now
 move to a course on electromagnetism, we encounter almost the same
 equation for an RLC circuit, namely
@@ -1091,7 +1091,7 @@ we determine $\alpha$  so that
 \frac{mk}{\hbar^2} \alpha^4 = 1,
 \]
 and it defines a natural length scale in terms of the various physical
-constants that determine the equation.  The final expression, inserting $k=m\omega^2$ is 
+constants that determine the equation.  The final expression, inserting $k=m\omega^2$ is
 \[
 \alpha = \left(\frac{\hbar}{m\omega}\right)^{1/2}.
 \]
@@ -1361,11 +1361,11 @@ sector.
 
 \section{Conclusions and Perspectives}
 
-In this contribution we have outlined some of the basic elements we
+In this contribution, we have outlined some of the basic elements that we
 feel are necessary to address in order to introduce computing in
 various undergraduate physics courses.  Some of the conclusions we
 would like to emphasize include a proper  definition of computing,
-the development of learning outcomes that apply to both computational science, mathematics  and
+the development of learning outcomes that apply to both computational science, mathematics,  and
 physics courses as well as  proper assessment programs.
 
 Collaboration across departments is necessary in order to achieve a
@@ -1376,29 +1376,30 @@ a programming course with mathematics courses and other science
 courses results in a better coordination of both learning outcomes and
 computing skills and abilities. The experiences we have drawn from the
 University of Oslo and Michigan State University show that an early
-and compulsory programming course with central scientific elements, is
+and compulsory programming course, which includes central scientific elements, is
 important in order to integrate properly a computational perspective
 in our physics education.
 
 The benefits are many, in particular it allows us to make our research
-more visible in early undergraduate physics courses, enhancing thereby
-research based teaching with the possibility to focus more on
+more visible in early undergraduate physics courses, enhancing
+research-based teaching with the possibility to focus more on
 understanding and increased insight.  It gives also our candidates the
 skills and abilities that are requested by society at large, both from
 the private and the public sectors. With computing, we emphasize a broader and
 more up-to-date education with a problem-based orientation, often
-requested by potential employers.  Furthermore, our experiences from the both universities 
+requested by potential employers.  Furthermore, our experiences from the both universities
 indicate that a discussion of computing across disciplines results in an increased
 impetus for broad cooperation in teaching and a broader focus on university pedagogical topics.
 
 We are now in the process of developing computing learning outcomes with
-examples for central physics courses. Together with a research based assessment program we will be able to answer central questions like whether the introduction of computing increases a student's insights and understanding of the underlying physics. 
+examples for central physics courses. Together with a research based assessment program, we will be able to answer central questions like whether the introduction of computing increases a student's insights and understanding of the underlying physics.
 
 
 
 \begin{acknowledgement}
-MHJ's work is supported by U.S. National Science Foundation  Grant No.~PHY-1404159. 
-Both authors acknowlegde support from the recently established Center for Computing in Science Education, University of Oslo, Norway.
+MHJ's work is supported by U.S. National Science Foundation Grant No.~PHY-1404159.
+MDC's work is supported by U.S. National Science Foundation Grants Nos.~DRL-1741575, DUE-1725520, DUE-1524128, DUE-1504786, and DUE-1431776.
+Both authors acknowledge support from the recently established Center for Computing in Science Education, University of Oslo, Norway.
 \end{acknowledgement}
 
 
@@ -1411,17 +1412,16 @@ Both authors acknowlegde support from the recently established Center for Comput
 \bibitem{DannyMortenBook} Marcos Daniel Caballero and Morten Hjorth-Jensen, {\em Integrating a Computational Perspective in Physics Courses}, in preparation.
 \bibitem{PICUP} Partnership for Integration of Computation into Undergraduate Physics, \url{{http://www.compadre.org/picup/}}{PICUP project}.
 \bibitem{PERLMSU} Physics Education Research Group at Michigan State University, \url{https://perl.natsci.msu.edu/}.
-\bibitem{AMS2015} 
-Anders Malthe-S{\o}renssen, {\em Elementary Mechanics Using Python}, 
+\bibitem{AMS2015}
+Anders Malthe-S{\o}renssen, {\em Elementary Mechanics Using Python},
 Undergraduate Lecture Notes in Physics (Springer, Berlin, 2015).
 \bibitem{AIV2018} Arnt Inge Vistnes, {\em Waves and Motion}, in press, Undergraduate Texts in Physics (Springer, Berlin, 2018).
 \bibitem{AMSDS2019} Anders Malthe-S{\o}renssen and Dag Kristian Dysthe, {\em Statistical and Thermal Physics}, in press,  Undergraduate Texts in Physics (Springer, Berlin, 2018/2019).
 \bibitem{SymPy} Symbolic Python, \href{http://www.sympy.org/en/index.html}.
-\bibitem{GolubVanLoan} Gene H.~Golub and Charles F.~Van Loan, {\em Matrix Computations} (The Johns Hopkins University Press, 1996, Baltimore and London). 
+\bibitem{GolubVanLoan} Gene H.~Golub and Charles F.~Van Loan, {\em Matrix Computations} (The Johns Hopkins University Press, 1996, Baltimore and London).
 \end{thebibliography}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
-
