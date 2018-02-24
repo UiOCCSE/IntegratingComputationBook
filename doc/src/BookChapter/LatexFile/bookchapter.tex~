@@ -1361,47 +1361,44 @@ sector.
 
 \section{Conclusions and Perspectives}
 
+In this contribution we have outlined some of the basic elements we
+feel are necessary to address in order to introduce computing in
+various undergraduate physics courses.  Some of the conclusions we
+would like to emphasize include a proper  definition of computing,
+the development of learning outcomes that apply to both computational science, mathematics  and
+physics courses as well as  proper assessment programs.
 
+Collaboration across departments is necessary in order to achieve a
+synchronization between various topics and learning outcomes, as well
+as an early introduction to programming. Many universities
+require such courses as part of a physics degree. Coordinating such
+a programming course with mathematics courses and other science
+courses results in a better coordination of both learning outcomes and
+computing skills and abilities. The experiences we have drawn from the
+University of Oslo and Michigan State University show that an early
+and compulsory programming course with central scientific elements, is
+important in order to integrate properly a computational perspective
+in our physics education.
 
-\begin{itemize}
-\item Early introduction, programming course at beginning of studies linked with math courses and science and engineering courses.
+The benefits are many, in particular it allows us to make our research
+more visible in early undergraduate physics courses, enhancing thereby
+research based teaching with the possibility to focus more on
+understanding and increased insight.  It gives also our candidates the
+skills and abilities that are requested by society at large, both from
+the private and the public sectors. With computing, we emphasize a broader and
+more up-to-date education with a problem-based orientation, often
+requested by potential employers.  Furthermore, our experiences from the both universities 
+indicate that a discussion of computing across disciplines results in an increased
+impetus for broad cooperation in teaching and a broader focus on university pedagogical topics.
 
-\item Crucial to learn proper programming at the beginning.
-
-\item Good TAs
-
-\item Choice of software.
-
-\item Textbooks and modularization of topics, ask for details
-
-\item Resources and expenses.
-
-\item Tailor to specific disciplines.
-
-\item Organizational matters.
-
-
-\item Make our research visible in early undergraduate courses, enhance research based teaching
-
-\item Possibility to focus more on understanding and increased insight.
-
-\item Impetus for broad cooperation in teaching. Broad focus on university pedagogical topics.
-
-\item Strengthening of instruction based teaching (expensive and time-consuming).
-
-\item Give our candidates a broader and more up-to-date education with a problem-based orientation, often requested by potential employers.
-
-\item And perhaps the most important issue: does this enhance the student's insight in the Sciences?
-\end{itemize}
-
+We are now in the process of developing computing learning outcomes with
+examples for central physics courses. Together with a research based assessment program we will be able to answer central questions like whether the introduction of computing increases a student's insights and understanding of the underlying physics. 
 
 
 
 \begin{acknowledgement}
-DMC's work is supported by 
 MHJ's work is supported by U.S. National Science Foundation  Grant No.~PHY-1404159. 
-Both authors acknowlegde support from the recently established center of excellence 
-the Center for Computing in Science Education, University of Oslo, Norway.
+Both authors acknowlegde support from the recently established Center for Computing in Science Education, University of Oslo, Norway.
 \end{acknowledgement}
 
 
@@ -1409,8 +1406,9 @@ the Center for Computing in Science Education, University of Oslo, Norway.
 
 \begin{thebibliography}{99}
 \bibitem{ACM2013} Association for Computing Machinery, 2013, \url{{http://pathways.acm.org/executive-summary.html}}.
-\bibitem{CSEUiO} Computing in Science Education project, University of Oslo, Norway, 
+\bibitem{CSEUiO} Computing in Science Education project, University of Oslo, Norway, \url{https://www.mn.uio.no/english/about/collaboration/cse/}.
 \bibitem{CCSEUiO}Center for Computing in Science Education, University of Oslo, Norway,  \url{{http://www.mn.uio.no/ccse/english/}}.
+\bibitem{DannyMortenBook} Daniel Marcos Caballero and Morten Hjorth-Jensen, {\em Integrating a Computational Perspective in Physics Courses}, in preparation.
 \bibitem{PICUP} Partnership for Integration of Computation into Undergraduate Physics, \url{{http://www.compadre.org/picup/}}{PICUP project}.
 \bibitem{PERLMSU} Physics Education Research Group at Michigan State University, \url{https://perl.natsci.msu.edu/}.
 \bibitem{AMS2015} 
@@ -1420,7 +1418,6 @@ Undergraduate Lecture Notes in Physics (Springer, Berlin, 2015).
 \bibitem{AMSDS2019} Anders Malthe-S{\o}renssen and Dag Kristian Dysthe, {\em Statistical and Thermal Physics}, in press,  Undergraduate Texts in Physics (Springer, Berlin, 2018/2019).
 \bibitem{SymPy} Symbolic Python, \href{http://www.sympy.org/en/index.html}.
 \bibitem{GolubVanLoan} Gene H.~Golub and Charles F.~Van Loan, {\em Matrix Computations} (The Johns Hopkins University Press, 1996, Baltimore and London). 
-\bibitem{DannyMortenBook} Daniel Marcos Caballero and Morten Hjorth-Jensen, {\em Integrating a Computational Perspective in Physics Courses}, in preparation.
 \end{thebibliography}
 
 
