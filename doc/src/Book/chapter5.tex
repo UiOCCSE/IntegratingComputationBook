@@ -1,0 +1,163 @@
+\chapter{Teaching Mechanics with Computational Exercises and Projects}
+
+
+We assume that our students know how to solve and study systems of
+ordinary differential with initial conditions only. Later in this
+section we will venture into two-point boundary value problems that
+can be studied and solved with eigenvalue solvers.
+
+Let us start with initial value problems and ordinary differential
+equations. Such equations appear in a wealth of physics
+applications. Typical examples students will encounter are the
+classical pendulum in a mechanics course, an RLC circuit in the course on
+electromagnetism, the modeling of the Solar system in an Astrophysics
+course and many other cases.  The essential message is that, with
+properly scaled equations, students can use essentially the
+same algorithms to solve these problems, either starting with
+a simple modified Euler algorithm or a Runge-Kutta class of
+algorithms or the so-called Verlet class of algorithms, to mention a few.
+
+The idea is that algorithms students develop and use in one course can be
+reused in other courses.  This allows  students to make the
+relevant abstractions discussed above, opening up for a much wider
+range of applicabilities.
+
+Here we look at two familiar cases from
+mechanics and electromagnetism, the equations for the classical
+pendulum and those for an RLC circuit.  When properly scaled, these
+equations are essentially the same. To scale equations,
+either in terms of dimensionless variables or appropriate variables,
+is an important aspect which allows the students to see the potential
+for abstractions and hopefully see how the problems studied in say a
+mechanics course can be transferred to other fields.
+
+The classical pendulum with damping and external force as it could
+appear in a mechanics course is given by the following equation of
+motion for the angle $\theta$ as function of time $t$
+\[
+  ml\frac{d^2\theta}{dt^2}+\nu\frac{d\theta}{dt}  +mgsin(\theta)=Acos(\omega t),
+\]
+where $m$ is its mass, $l$ the length, $\nu$ a damping factor and $A$
+the amplitude of an applied external source with frequency
+$\omega$. The solution of this type of equations (second-order
+differential equations with given initial conditions) is something the
+students encounter the first semester thorugh the courses IN1900 and
+MAT-INF1100 at the University of Oslo. At Michigan State University
+there is now a compulsory course for physics majors that includes many
+of these elements.  With this background, students are already familiar with
+the numerical solution and visualization of such equations.
+If we now
+move to a course on electromagnetism, we encounter almost the same
+equation for an RLC circuit, namely
+\[
+L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=Acos(\omega t),
+\]
+where $L$ is the inductance, $R$ the applied resistance, $Q$ the
+time-dependent charge and $C$ the capacitance.
+
+Let us consider first the classical pendulum equations with damping and an
+external force and define the scaled velocity $\hat{v}$ as
+\[
+   \frac{d\theta}{d\hat{t}} =\hat{v},
+\]
+where we have defined a dimensionless time variable $\hat{t}$. With
+the equation for the velocity we can rewrite the second-order
+differential in terms of two coupled first-order differential
+equations where the second equation represents the acceleration
+\[
+   \frac{d\hat{v}}{d\hat{t}} =Acos(\hat{\omega} \hat{t})-\hat{v}\xi-\sin(\theta).
+\]
+We have scaled the  equations with $\omega_0=\sqrt{g/l}$,
+$\hat{t}=\omega_0 t$ and $\xi = mg/\omega_0\nu$. The frequency
+$\omega_0$ defines a so-called natural frequency defined by the
+gravitational acceleration $g$ and the length of the pendulum $l$. The
+frequency $\hat{\omega}= \omega/\omega_0$.  In a similar way, our RLC
+circuit can now be rewritten in terms of two coupled first-order
+differential equations,
+\[
+   \frac{dQ}{d\hat{t}} =\hat{I},
+\]
+and
+\[
+   \frac{d\hat{I}}{d\hat{t}} =Acos(\hat{\omega} \hat{t})-\hat{I}\xi-Q,
+\]
+with $\omega_0=1/\sqrt{LC}$, $\hat{t}=\omega_0 t$ and $\xi =
+CR\omega_0$. Here we see that the natural frequency is defined in
+terms of the physical parameters $L$ and $C$.
+
+The equations are essentially the same, the main differences reside in
+the different scaling constants and the introduction of a non-linear
+term for the angle $\theta$ in the pendulum equation. The differential
+solver the students end up writing in the mechanics course (which
+comes normally before the course on electromagnetism) can then be
+reused in the electromagnetism course, with a great potential for
+further abstraction.
+
+Let us now move to another frequently encountered problem in several
+physics courses, namely that of a two-point boundary value problem. In
+the examples below we will see again that if the equations are
+properly scaled, we can reuse the same algorithm for solving different
+physics problems. Here we will start with the equations for a buckling
+beam (a case which can be found in a mechanics course or a course on
+mathematical methods in physics). Thereafter, with a simple change of
+variables and constants, the same problem can be used to study a
+quantum mechanical particle confined to move in an infinite potential
+well.  By simply changing the diagonal matrix elements of the
+discretized differential equation problem, we can study particles that
+move in a harmonic oscillator potential or other types of
+quantum-mechanical one-body or selected two-body problems.  With
+slight modifications to the matrix that results from the
+discretization of a second derivative, we can study Poisson's equation
+in one dimension, a problem of relevance in
+electromagnetism.
+
+Let us start with the buckling beam. This is a two-point boundary
+value problem
+\[
+R \frac{d^2 u(x)}{dx^2} = -F u(x),
+\]
+where $u(x)$ is the vertical displacement, $R$ is a material specific
+constant, $F$ is the applied force and $x \in [0,L]$ with $u(0)=u(L)=0$.
+We scale the equation with $x = \rho L$ and $\rho \in [0,1]$ and get
+(note that we change from $u(x)$ to $v(\rho)$)
+\[
+\frac{d^2 v(\rho)}{dx^2} +K v(\rho)=0,
+\]
+which is, when discretized (see below), nothing but a standard eigenvalue problem with $K=
+FL^2/R$. Here we can assume that either the force $F$ or the material
+specific rigidity $R$ are unknown.  If we replace $R=-\hbar^2/2m$ and
+$-F=\lambda$, we have the quantum mechanical variant for a particle
+moving in a well with infinite walls at the endpoints.  The way to
+solve these equations numerically is to discretize the second
+derivative and the right hand side as
+\[
+    -\frac{v_{i+1} -2v_i +v_{i-i}}{h^2}=\lambda v_i,
+\]
+with $i=1,2,\dots, n$. Here $h$ is the step size which is defined by
+the number of integration (or mesh) points.  We need to add to this
+system the two boundary conditions $v(0) =v_0$ and $v(1) = v_{n+1}$,
+although they are not needed in the solution of the equations since
+their values are known.  For all integration points $i=1,2,\dots, n$
+the set of equations to solve result in a so-called tridiagonal
+Toeplitz matrix ( a special case from the discretized second
+derivative)
+\[
+    \mathbf{A} = \frac{1}{h^2}\begin{bmatrix}
+                          2 & -1 &  &   &  & \\
+                          -1 & 2 & -1 & & & \\
+                           & -1 & 2 & -1 & &  \\
+                           & \dots   & \dots &\dots   &\dots & \dots \\
+                           &   &  &-1  &2& -1 \\
+                           &    &  &   &-1 & 2 \\
+                      \end{bmatrix}
+\]
+and with the corresponding vectors $\mathbf{v} = (v_1, v_2,
+\dots,v_n)^T$ allows us to rewrite the differential equation as a
+standard eigenvalue problem
+\[
+   \mathbf{A}\mathbf{v} = \lambda\mathbf{v}.
+\]
+The tridiagonal Toeplitz matrix has analytical eigenpairs,
+providing us thereby with an invaluable check on the equations to be
+solved.
+

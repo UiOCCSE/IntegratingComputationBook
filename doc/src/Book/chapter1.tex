@@ -1,0 +1,161 @@
+\chapter{Why should we introduce computing in science courses}
+\section{Introduction: Scientific and educational motivation}
+
+Many important recent advances in our understanding of the physical
+world have been driven by large-scale computational modeling and data
+analysis, for example, the 2012 discovery of the Higgs boson, the 2013
+Nobel Prize in chemistry for computational modeling of molecules, and
+the 2016 discovery of gravitational waves.  Given the ubiquitous use
+in science and its critical importance to the future of science and
+engineering, scientific computing  plays a central role in scientific
+investigations and is critical to innovation in most domains of our
+lives. It underpins the majority of today's technological, economic
+and societal feats. We have entered an era in which huge amounts of
+data offer enormous opportunities. \href{{http://pathways.acm.org/executive-summary.html}}{By 2020, it is also expected that one out of every two
+jobs in the STEM (Science, Technology, Engineering and Mathematics) fields will be in
+computing}
+(Association for Computing Machinery, 2013, \cite{ACM2013}).
+
+These developments, needs and future challenges, as well as the
+developments that are now taking place within quantum computing,
+quantum information theory and data driven discoveries (data analysis and
+machine learning) will play an essential role in shaping future
+technological developments. Most of these developments require true
+cross-disciplinary approaches and bridge a vast range of
+temporal and spatial scales and include a wide variety of physical
+processes. To develop computational tools for such complex
+systems that give physically meaningful insights requires a deep
+understanding of approximation theory, high performance computing, and
+domain specific knowledge of the area one is modeling.
+
+Computing competence represents a central element in scientific
+problem solving, from basic education and research to essentially
+almost all advanced problems in modern societies. These
+competencies are not limited to STEM fields only. The statistical
+analysis of big data sets and how to use machine learning algorithms
+belong to the set of tools needed by almost all disciplines,
+spanning from the Social Sciences, Law, Education to the traditional
+STEM fields and Life Science.  Unfortunately, many of our students at
+both the undergraduate and the graduate levels are unprepared to use
+computational modeling, data science, and high performance computing,
+skills that are much valued by a broad range of employers. This lack of preparation is most certainly no fault of our students, but rather a broader issue associated with how departments, colleges, and universities are keeping up with the demands of these high-tech employers. It is through this integrated computational perspective that we aim to address this.
+Furthermore, although many universities do offer compulsory
+programming courses in scientific computing, and physics departments
+offer one or more elective courses in computational physics, there is
+often not a uniform and coherent approach to the development of
+computing  competencies and computational thinking. This has
+consequences for a systematic introduction and realization of
+computing  skills and competencies and pertaining learning outcomes.
+
+The aim of this contribution is to present examples on how to
+introduce a computational perspective in basic undergraduate physics
+courses, basing ourselves on experiences made at the University of
+Oslo in Norway and now also at Michigan State University in the
+USA. In particular, we will present the \textbf{Computing in Science
+Education} project from the University of Oslo \cite{CSEUiO}, a project which has
+evolved into a Center of Excellence in Education, the \href{{http://www.mn.uio.no/ccse/english/}}{Center for
+Computing in Science
+Education} \cite{CCSEUiO}. Similar initiatives
+and ideas are also being pursued at Michigan State University.  The
+overarching aim is to strengthen the computing  competencies of
+students, with key activities such as the establishment of learning
+outcomes, how to develop assessment programs and course
+transformations by including computational projects and exercises in a
+coherent way. The hope is that these initiatives can also lead to a
+better understanding of the scientific method and scientific reasoning
+as well as providing new and deeper insights about the underlying physics that governs a system.
+
+This contribution is organized as follows. After these introductory
+remarks, we present briefly in the next section what we mean by computing and present
+possible learning outcomes that could be applied to a bachelor's degree
+program in physics (Sec. \ref{sec:competencies}), which are distinguished as more general competencies and course-specific ones.  In Sec. \ref{sec:learingoutcomes}, we discuss possible paths on how to include and implement
+computational elements in central undergraduate physics courses. We discuss briefly
+how to assess various learning outcomes and how to develop a research program around this.
+Several examples that illustrate the links between the learning outcomes and specific mathematics and physics courses
+are discussed in Sec. \ref{sec:examples}.
+Finally, in the last section we present our conclusions and perspectives.
+
+
+\section{Computing competencies} \label{sec:competencies}
+
+The focus of this article is on computing competencies and how
+these help in enlarging the body of tools available to students and
+scientists alike, going well beyond classical tools taught in standard
+undergraduate courses in physics and mathematics. We will claim through various
+examples that computing  allows for a more generic handling of
+problems, where focusing on algorithmic aspects results in deeper
+insights about scientific problems.
+
+With \textbf{Computing } we will mean solving scientific problems
+using all possible tools, including symbolic computing, computers and
+numerical algorithms, experiments (often of a numerical character) and
+analytical paper and pencil solutions. We will thus, deliberately,
+avoid a discussion of computing and computational physics in
+particular as something separate from theoretical physics and
+experimental physics.  It is common in the scientific literature to
+encounter statements like \emph{Computational physics now represents
+  the third leg of research alongside analytical theory and
+  experiments}. In selected contexts where say high-performance topics
+or specific computational methodologies play a central role, it may be
+meaningful to separate analytical work from computational studies. We
+will however argue strongly, in particular within an educational
+context, for a view where computing means solving scientific problems
+with all possible tools. Through various examples in this article we
+will show that a tight connection between standard analytical work,
+combined with various algorithms and a computational approach, can
+help in enhancing the students' understanding of the scientific
+method, hopefully providing deeper insights about the physics (or
+other disciplines). Whether and how we achieve these outcomes is the
+purpose of research in computational physics education.
+
+The power of the scientific method lies in identifying a given problem
+as a special case of an abstract class of problems, identifying
+general solution methods for this class of problems, and applying a
+general method to the specific problem (applying means, in the case of
+computing, calculations by pen and paper, symbolic computing, or
+numerical computing  by ready-made and/or self-written software).
+
+This generic view on problems and methods is particularly important for
+understanding how to apply available generic software to solve a
+particular problem.  Algorithms involving pen and paper are
+traditionally aimed at what we often refer to as continuous models, of
+which only few can be solved analytically. The number of important
+differential equations in physics that can be solved analytically are
+rather few, limiting thereby the set of problems that can be addressed
+in order to deepen a student's insights about a particular physics
+case. On the other hand, the application of computers calls for
+approximate discrete models.  Much of the development of methods for
+continuous models are now being replaced by methods for discrete
+models in science and industry, simply because we can address much
+larger classes of problems with discrete models, often also by simpler
+and more generic methodologies.  In Sec. \ref{sec:examples} we will present
+several examples thereof. A typical case is that where an eigenvalue
+problem can allow students to study the analytical solution as well as
+moving to an interacting quantum mechanical case where no analytical
+solution exists. By merely changing the diagonal matrix elements, one
+can solve problems that span from classical mechanics and fluid
+dynamics to quantum mechanics and statistical physics.  Using
+essentially the same algorithm one can study physics cases that
+are covered by several courses, allowing teachers to focus
+more on the physical systems of interest.
+
+There are several advantages in  introducing computing in basic physics
+courses. It allows physics teachers to bring important elements of
+scientific methods at a much earlier stage in our students'
+education. Many advanced simulations used in physics research can
+easily be introduced, via various simplifications, in introductory
+physics courses, enhancing thereby the set of problems studied by the
+students (see Sec. \ref{sec:examples}). Computing gives university
+teachers a unique opportunity to enhance students' insights about
+physics and how to solve scientific problems. It gives the
+students the skills and abilities that are asked for by
+society. Computing allows for solving more realistic problems earlier
+and can provide an excellent training of creativity as well as enhancing the
+understanding of abstractions and generalizations. Furthermore,
+computing can decrease the need for special tricks and tedious
+algebra, and shifts the focus to problem definition, visualization,
+and "what if" discussions. Finally, if the setup of undergraduate
+courses is properly designed, with a synchronization with mathematics
+and computational science courses, computing can trigger further
+insights in mathematics and other disciplines.
+

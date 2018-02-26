@@ -1,0 +1,332 @@
+\chapter{Developing learning outcomes and assessment programs} 
+
+
+
+\section*{General learning outcomes for computing competence}
+
+
+An essential element in designing a synchronization of computing in
+various physics (and other disciplines as well) courses is a proper
+definition of learning outcomes, as well as the development of
+assessment programs and possibly a pertinent research program on physics education.
+Having a strong physics education
+group that can define a proper research program is an essential part
+of such an endeavor. Michigan State University has a strong physics
+education group involved in such research programs. Similarly, the
+University of Oslo, with its recently established center of excellence
+in Education \cite{CCSEUiO}, has started to define  a research program that aims at assessing
+the relevance and importance of
+computing in science education.
+
+Physics, together with basic mathematics and computational science
+courses, is at the undergraduate level presented in a very homogeneous
+way worldwide.  Most universities offer more or the less the same
+topics and courses, starting with Mechanics and Classical Mechanics,
+Waves, Electromagnetism, Quantum physics and Quantum Mechanics and
+ending with Statistical physics. Similarly, during the last year of
+the Bachelor's degree one finds elective courses on computational
+physics and mathematical methods in physics, in addition to a
+selection of compulsory introductory laboratory courses. Additionally, most physics undergraduate programs have now a compulsory
+introductory course in scientific programming offered by the computer science department. Here, one encounters
+frequently Python as the default programming language.  Moreover, one
+finds almost the same topics covered by the basic mathematics courses
+required for a physics degree, from basic calculus to linear algebra,
+differential equations and real analysis. Many mathematics departments
+and/or computational science departments offer courses on numerical
+mathematics that are based on the first course in programming.
+
+These developments have taken place during the last decade and several
+universities are attempting to include a more coherent
+computational perspective to our basic education. In order to achieve this, it is important to develop a
+strategy where the introduction of computational elements are properly
+synchronized between physics, mathematics, and computational science
+courses. This would allow physics teachers to focus more on the relevant
+physics. The development of learning outcomes plays a central role in this work.  An
+additional benefit of properly-developed learning outcomes is the
+stimulation of cross-department collaborations as well as an increased
+awareness about what is being taught in different courses.  Here we
+list several possibilities, starting with some basic algorithms and topics that
+can be taught in mathematics and computational science courses. We end
+with a discussion of possible learning outcomes for central
+undergraduate physics courses
+
+
+
+
+\subsection{General Learning Outcomes for Computing Competence.}
+
+Here we present some high-level learning outcomes that we expect
+students to achieve through comprehensive and coordinated instruction
+in numerical methods over the course of their undergraduate
+program. These learning outcomes are different from specific learning
+goals in that the former reference the end state that we aim for
+students to achieve. The latter references the specific knowledge,
+tools, and practices with which students should engage and discusses
+how we expect them to participate in that work.
+
+Numerical algorithms form the basis for solving science and
+engineering problems with computers. An understanding of algorithms
+does not itself serve as an understanding of computing, but it is a
+necessary step along the path. Through comprehensive and coordinated
+instruction, we aim for students to have developed a deep understanding of:
+
+\begin{itemize}
+\item the most fundamental algorithms for linear algebra, ordinary and partial differential equations, and optimization methods;
+
+\item numerical integration including Trapezoidal and Simpson's rule, as well as multidimensional integrals;
+
+\item random numbers, random walks, probability distributions, Monte Carlo integration and Monte Carlo methods;
+
+\item root finding and interpolation methods;
+
+\item machine learning algorithms; and
+
+\item statistical data analysis and handling of data sets.
+
+\end{itemize}
+
+Furthermore, we aim for students to develop:
+
+\begin{itemize}
+
+\item a working knowledge of advanced algorithms and how they can be accessed in available software;
+
+\item an understanding of approximation errors and how they can present themselves in different problems; and
+
+\item the ability to apply fundamental and advanced algorithms to classical model problems as well as real-world problems as well to assess the uncertainty of their results.
+\end{itemize}
+
+
+Later courses should build on this foundation as much as possible. In designing learning outcomes and course contents, one should make
+sure that there is a progression in the use of mathematics, numerical
+methods and programming, as well as the contents of various physics
+courses.  This means also that teachers in other courses do not need
+to use much time on numerical tools since these are naturally included
+in other courses.
+
+
+
+\subsubsection{Learning Outcomes for Symbolic Computing}
+Symbolic computing  is a helpful tool for addressing certain classes of
+problems where a functional representation of the solution (or part of
+the solution) is needed. Through engaging with symbolic computing
+platforms, we aim for students to have developed:
+
+\begin{itemize}
+\item a working knowledge of at least one computer algebra system (CAS);
+
+\item the ability to apply a CAS to perform classical mathematics including calculus, linear algebra and differential equations; and
+
+\item the ability to verify the results produced by the CAS using some other means.
+\end{itemize}
+
+
+\subsubsection{Learning Outcomes for Programming}
+Programming is a necessary aspect of learning computing  for science
+and engineering. The specific languages and/or environments that
+students learn are less important than the nature of that learning
+(i.e., learning programming for the purposes of solving science
+problems). By numerically solving science problems, we expect students
+to have developed (these are possible examples):
+
+\begin{itemize}
+\item an understanding of programming in a high-level language (e.g., MATLAB, Python, R);
+
+\item an understanding of programming in a compiled language (e.g., Fortran, C, C++);
+
+\item the ability to to implement and apply numerical algorithms in reusable software that acknowledges the generic nature of the mathematical algorithms;
+
+\item a working knowledge of basic software engineering elements including functions, classes, modules/libraries, testing procedures and frameworks, scripting for automated and reproducible experiments, documentation tools, and version control systems (e.g., Git); and
+
+\item an understanding of debugging software, e.g., as part of implementing comprehensive tests.
+\end{itemize}
+
+
+\subsubsection{Learning Outcomes for Mathematical Modeling}
+Preparing a problem to be solved numerically is a critical step in making progress towards an eventual solution. By providing opportunities for students to engage in modeling, we aim for them to develop the ability to solve real problems from applied sciences by:
+
+\begin{itemize}
+\item deriving computational models from basic principles in physics and articulating the underlying assumptions in those models;
+
+\item constructing models with dimensionless and/or scaled forms to reduce and simplify input data; and
+
+\item interpreting the model's dimensionless and/or scaled parameters to increase their understanding of the model and its predictions.
+\end{itemize}
+
+
+\subsubsection{Learning Outcomes for Verification}
+Verifying a model and the resulting outcomes it produces are essential elements to generating confidence in the model itself. Moreover, such verifications provide evidence that the work is reproducible. By engaging in verification practices, we aim for students to develop:
+
+\begin{itemize}
+\item an understanding of how to program testing procedures; and
+
+\item the knowledge of testing/verification methods including the use of:
+\begin{itemize}
+
+  \item exact solutions of numerical models,
+
+  \item classical analytical solutions including asymptotic solutions,
+
+  \item computed asymptotic approximation errors (i.e., convergence rates), and
+
+  \item unit tests and step-wise construction of tests to aid debugging.
+\end{itemize}
+
+
+\end{itemize}
+
+
+\subsubsection{Learning Outcomes for Presentation of Results}
+The results of a computation need to be communicated in some format (i.e., through figures, posters, talks, and other forms of written and oral communication). Computation affords the experience of presenting original results quite readily. Through their engagement with presentations of their findings, we aim for students to develop:
+
+\begin{itemize}
+\item the ability to make use of different visualization techniques for different types of computed data;
+
+\item the ability to present computed results in scientific reports and oral presentations effectively; and
+
+\item a working knowledge of the norms and practices for scientific presentations in various formats (i.e., figures, posters, talks, and written reports).
+\end{itemize}
+
+
+The above learning goals and outcomes are of a more generic character. What follows here are specific
+algorithms that occur frequently in scientific problems. The implementation of these algorithms in various physics courses, together with problem and project solving, is a way to implement large fractions of the above learning goals.
+
+
+\subsection{Central Tools and Programming Languages}
+We will strongly recommend that Python is used as the high-level
+ programming language. Other high-level environments like Mathematica
+ and Matlab can also be presented and offered as special courses. This
+ means that students can apply their knowledge from the basic programming course offered by most universities.
+Many university courses in programming  make use of Python, and extend their computational knowledge in
+ various physics classes. We recommend  that the following
+ tools are used:
+\begin{enumerate}
+\item \href{{http://jupyter.org/}}{jupyter and ipython notebooks};
+
+\item version control software like \href{{https://git-scm.com/}}{git} and repositories like \href{{https://github.com/}}{GitHub} and \href{{https://gitlab.com/}}{GitLab};
+
+\item other type setting tools like {\LaTeX}; and
+
+\item unit tests and using existing tools for unit tests. \href{{https://docs.python.org/2/library/unittest.html}}{Python has extensive tools for this.}
+\end{enumerate}
+
+
+The notebooks can be used to hand in exercises and projects. They can
+provide the students with experience in presenting their work in the
+form of scientific/technical reports.
+
+Version control software allows teachers to bring in reproducibility
+of science as well as enhancing collaborative efforts among
+students. Using version control can also be used to help students
+present benchmark results, allowing others to verify their
+results. Unit testing is a central element in the development of
+numerical projects, from microtests of code fragments, to intermediate
+merging of functions to final tests of the correctness of a code.
+
+\subsection{Specific Algorithms for Basic Physics Courses}
+
+For a bachelor's degree in physics, it is now more and more common to require a compulsory
+programming course, typically taught during the first two years of
+undergraduate studies. The programming course, together with
+mathematics courses, lay the foundation for the use of computational
+exercises and projects in various physics courses. Based on this
+course, and the various mathematics courses included in a physics
+degree, there is a unique possibility to incorporate computational
+exercises and projects in various physics courses, without taking away
+the attention from the basic physics topics to be covered.
+
+What follows below is a suggested list of possible algorithms which could be included in central physics courses. The list is by no means exhaustive and is mainly meant as a
+guideline of what can be included. The examples we discuss in Sec. \ref{sec:examples}, illustrate how these algorithms can be included in courses like mechanics, quantum physics/mechanics, statistical and thermal physics and electromagnetism. These are all core courses in  a typical bachelor's degree in physics.
+
+\subsection{Central Algorithms}
+\begin{itemize}
+\item Ordinary differential equations
+\begin{enumerate}
+
+  \item Euler, modified Euler, Verlet and Runge-Kutta methods with applications to problems in courses on electromagnetism, methods for theoretical physics, quantum mechanics and mechanics.
+
+\end{enumerate}
+
+
+\item Partial differential equations
+\begin{enumerate}
+
+  \item Diffusion in one and two dimensions (statistical physics), wave equation in one and two dimensions. These are examples of physics cases which could appear in courses on  mechanics, electromagnetism, quantum mechanics, methods for theoretical physics and Laplace's and Poisson's equations in  a course on electromagnetism.
+
+\end{enumerate}
+
+
+\item Numerical integration
+\begin{enumerate}
+
+  \item Trapezoidal and Simpson's rule and Monte Carlo integration. Here one can envision applications in statistical physics, methods of theoretical physics, electromagnetism and quantum mechanics.
+
+\end{enumerate}
+
+
+\item Statistical analysis, random numbers, random walks, probability distributions, Monte Carlo integration and Metropolis algorithm. These are algorithms with important applications to statistical physics and laboratory courses.
+
+\item Linear Algebra and eigenvalue problems.
+\begin{enumerate}
+
+  \item Gaussian elimination, LU-decomposition, eigenvalue solvers, and iterative methods like  Jacobi or Gauss-Seidel for systems of linear equations. These algorithms are important for several courses, classical mechanics, methods of theoretical physics, electromagnetism and quantum mechanics.
+
+\end{enumerate}
+
+
+\item Signal processing
+\begin{enumerate}
+
+  \item Discrete (fast) Fourier transforms, Lagrange/spline/Fourier interpolation, numeric convolutions {\&} circulant matrices, filtering. Here we can think of applications in electromagnetism, quantum mechanics, and experimental physics (data acquisition)
+
+\end{enumerate}
+
+
+\item Root finding techniques, used in methods for theoretical physics, quantum mechanics, electromagnetism and mechanics.
+
+\item Machine Learning algorithms and Statistical Data Analysis, relevant for laboratory courses
+\end{itemize}
+
+
+In order to achieve a proper pedagogical introduction of these
+algorithms, it is important that students and teachers see how these
+algorithms are used to solve a variety of physics problems. The same
+algorithm, for example the solution of a second-order differential
+equation, can be used to solve the equations for the classical
+pendulum in a mechanics course or the (with a suitable change of
+variables) equations for a coupled RLC circuit in the electromagnetism
+course. Similarly, if students develop a program for studies of
+celestial bodies in the mechanics course, many of the elements of such
+a program can be reused in a molecular dynamics calculation in a
+course on statistical physics and thermal physics. The two-point
+boundary value problem for a buckling beam (discretized as an
+eigenvalue problem) can be reused in quantum mechanical studies of
+interacting electrons in oscillator traps, or just to study a particle
+in a box potential with varying depth and extension. We discuss some
+selected examples in section \ref{sec:examples}. Our coming textbook
+\cite{DannyMortenBook} will contain a more exhaustive discussion of these, combined with
+a more detailed list of examples and a proper discussion of
+learning outcomes and possible assessment programs.
+
+In order to aid the introduction of computational exercises and
+projects, there is a strong need to develop educational resources.
+Physics is an old discipline with a large wealth of established analytical exercises and
+projects. In fields like mechanics, we have centuries of pedagogical
+developments with a strong emphasis on developing analytical
+skills. The majority of physics teachers are well familiar with this approach.
+In order to see how computing  can enlarge this body of exercises
+and projects, and hopefully add additional insights to the physics
+behind various phenomena, we find it important to develop a large body
+of computational examples.
+The
+\href{{http://www.compadre.org/picup/}}{PICUP project}, Partnership for
+Integration of Computation into Undergraduate physics, develops such
+\href{{http://www.compadre.org/PICUP/resources/}}{resources for teachers and students on the integration of
+computational material} \cite{PICUP}.
+We strongly recommend these resources.
+
+
+\subsubsection{Advanced Computational Physics Courses}
+Towards the end of undergraduate studies it is useful to offer a course which focuses on more advanced algorithms and presents compiled languages like C++ and Fortran, languages our students will meet in actual research.
+Furthermore, such a course should offer more advanced projects which train the students in actual research, developing more complicated programs and working on larger projects.
+
